@@ -8,14 +8,14 @@ export function MalarkeyDirective(malarkey) {
     },
     template: '&nbsp;',
     link: linkFunc,
-    controller: MalarkeyController,
-    controllerAs: 'vm'
+    controller: MalarkeyController
+    // controllerAs: 'vm'
   };
 
   return directive;
 
-  function linkFunc(scope, el, attr, vm) {
-    let watcher;
+  function linkFunc(scope, el) {
+    // let watcher;
     let typist = malarkey(el[0], {
       typeSpeed: 40,
       deleteSpeed: 40,
@@ -30,40 +30,38 @@ export function MalarkeyDirective(malarkey) {
       typist.type(value).pause().delete();
     });
 
-    watcher = scope.$watch('vm.contributors', () => {
-      angular.forEach(vm.contributors, (contributor) => {
-        typist.type(contributor.login).pause().delete();
-      });
-    });
+    // watcher = scope.$watch('vm.contributors', () => {
+    //   angular.forEach(vm.contributors, (contributor) => {
+    //     typist.type(contributor.login).pause().delete();
+    //   });
+    // });
 
     scope.$on('$destroy', () => {
-      watcher();
+      // watcher();
     });
   }
-
 }
 
 class MalarkeyController {
-  constructor ($log, githubContributor) {
+  constructor ($log) {
     'ngInject';
 
     this.$log = $log;
     this.contributors = [];
-
-    this.activate(githubContributor);
+    // this.activate(githubContributor);
   }
 
-  activate(githubContributor) {
-    return this.getContributors(githubContributor).then(() => {
-      this.$log.info('Activated Contributors View');
-    });
-  }
+  // activate(githubContributor) {
+  //   return this.getContributors(githubContributor).then(() => {
+  //     this.$log.info('Activated Contributors View');
+  //   });
+  // }
 
-  getContributors(githubContributor) {
-    return githubContributor.getContributors(10).then((data) => {
-      this.contributors = data;
-
-      return this.contributors;
-    });
-  }
+  // getContributors(githubContributor) {
+  //   return githubContributor.getContributors(10).then((data) => {
+  //     this.contributors = data;
+  //
+  //     return this.contributors;
+  //   });
+  // }
 }

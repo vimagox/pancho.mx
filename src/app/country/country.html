@@ -1,0 +1,13 @@
+{{country}}
+<h1>hello</h1>
+<div class="row" style="border:1px solid red;height:3em;">
+  {{ country }}
+  <div class="col-sm-6 col-md-4" ng-repeat="region in country.regions">
+    <div class="thumbnail">
+      <img class="pull-right" ng-src="assets/images/{{ region.party }}" alt="{{ region.party }}">
+      <div class="caption">
+        <h3>{{ region.name }}</h3>
+      </div>
+    </div>
+  </div>
+</div>
