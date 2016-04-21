@@ -1,3 +1,6 @@
+[ ![Codeship Status for vimagox/pancho.mx](https://codeship.com/projects/99362af0-ea19-0133-a1fa-5a99213623df/status?branch=master)](https://codeship.com/projects/147803)
+
+
 It's time to use Gulp tasks:
 - `$ gulp` to build an optimized version of your application in folder dist
 - `$ gulp serve` to start BrowserSync server on your source files with live reload
@@ -9,4 +12,3 @@ It's time to use Gulp tasks:
 
 
 rake db:seed:users (municipioapi)
-export MAPI_AUTHORIZATION=xxx

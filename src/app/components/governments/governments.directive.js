@@ -57,9 +57,9 @@ export function GovernmentsDirective() {
     // //   });
     // // });
     //
-    // scope.$on('$destroy', () => {
-    //   // watcher();
-    // });
+    scope.$on('$destroy', () => {
+      watcher();
+    });
   }
 }
 
