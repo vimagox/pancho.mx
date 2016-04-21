@@ -10,7 +10,15 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
     .state('mexico', {
       url: '/mex',
       templateUrl: 'app/country/country.html',
-      controller: 'CountryController'
+      controller: 'CountryController',
+      controllerAs: 'country'
+    })
+    .state('region', {
+      url: '/mex/:alias',
+      params: { id: null },
+      templateUrl: 'app/region/region.html',
+      controller: 'RegionController',
+      controllerAs: 'region'
     });
 
   $urlRouterProvider.otherwise('/');

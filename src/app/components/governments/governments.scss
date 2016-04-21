@@ -1,0 +1,62 @@
+#governments {
+  background-color: #444;
+  margin:1em;
+  .government {
+    height:12.5em;
+    background-color:#222;
+    color:white;
+    padding-top:3em;
+    ul {
+      margin-top:1em;
+      padding:0 2em;
+      li {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        text-align:center;
+        height:3em;
+        padding:0 .5em;
+        div {
+          cursor:pointer;
+          background-color: #000;
+          width:100%;
+          border:2px solid #333;
+          padding: 1em 0;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+
+  .selections {
+    padding:1em 2em;
+    .selection-wrapper {
+      padding:.2em;
+      .selection {
+        border:1px solid #fff;
+        background-color:#fff;
+        cursor:pointer;
+        border-radius:2px;
+        border:3px solid white;
+        &:hover {
+          border:3px solid #888;
+          border-radius:2px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen
+    and (min-device-width : 375px)
+    and (max-device-width : 667px) {
+
+
+    #governments {
+      padding:0;
+      margin:0;
+        .government {
+          height:10em;
+        }
+    }
+}

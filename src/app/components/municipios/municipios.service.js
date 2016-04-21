@@ -10,11 +10,27 @@ export class MunicipiosService {
   country(c, callback) {
     return this.xhttp.get(this.apiHost + '/'+c+'?include=government')
       .then((response) => {
-        // this.$log.log('--------------');
-        // this.$log.log(response.country);
-        // this.$log.log('--------------');
         callback(response.country);
-        // return response.country;
+      })
+      .catch((error) => {
+        this.$log.error('XHR Failed for Municipios.\n' + angular.toJson(error.data, true));
+      });
+  }
+
+  region(r, callback) {
+    return this.xhttp.get(this.apiHost + '/regions/'+r+'?include=government')
+      .then((response) => {
+        callback(response.region);
+      })
+      .catch((error) => {
+        this.$log.error('XHR Failed for Municipios.\n' + angular.toJson(error.data, true));
+      });
+  }
+
+  municipio(m, callback) {
+    return this.xhttp.get(this.apiHost + '/municipios/'+m+'?include=government')
+      .then((response) => {
+        callback(response.municipio);
       })
       .catch((error) => {
         this.$log.error('XHR Failed for Municipios.\n' + angular.toJson(error.data, true));

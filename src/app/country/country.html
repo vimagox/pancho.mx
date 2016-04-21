@@ -1,13 +1,44 @@
-{{country}}
-<h1>hello</h1>
-<div class="row" style="border:1px solid red;height:3em;">
-  {{ country }}
-  <div class="col-sm-6 col-md-4" ng-repeat="region in country.regions">
-    <div class="thumbnail">
-      <img class="pull-right" ng-src="assets/images/{{ region.party }}" alt="{{ region.party }}">
-      <div class="caption">
-        <h3>{{ region.name }}</h3>
+<xmenu xselection=country.xselection></xmenu>
+<div id="governments" class="xcontainer" style="margin:0;padding:0;">
+  <div style="position:fixed;height:4em;xwidth:100%;z-index:200;">
+    <div ui-sref="mexico" class="col-sm-12 col-md-6" style="background-color:#000;color:#fff;width:100%;position:relative;">
+      <div style="position:relative;padding:.5em;">
+        <div class="visible-xs">
+          <div>
+            <h3 style="text-align:center;">{{ governments.name }}</h3>
+          </div>
+          <div ng-if="governments.back" ui-sref="governments.back" style="position:absolute;left:-.5em;top:.6em;color:#ddd;"><i class="fa fa-chevron-left"></i></div>
+        </div>
+        <div class="hidden-xs">
+          <div>
+            <h3 style="text-align:left;text-decoration:underline;">{{ governments.name }}</h3>
+          </div>
+          <div ng-if="back">
+          </div>
+          <div ng-if="governments.back" ui-sref="governments.back" style="position:absolute;left:-.5em;top:.6em;color:#ddd;"><i class="fa fa-chevron-left"></i></div>
+        </div>
       </div>
     </div>
   </div>
+
+  <div class="government">
+    <div style="text-align:center;"><img ng-src="/assets/images/{{governments.gov.party}}.png"/></div>
+    <div style="text-align:center;">{{governments.gov.vato}}</div>
+    <div style="text-align:center;padding-top:.25em;">{{governments.gov.period_start}} - {{governments.gov.period_end}}</div>
+  </div>
+
+
+<div ng-if="country.xselection === 'govs'" class="country">
+  <governments name={{country.country.name}} link='region' list=country.country.regions gov=country.country.government></governments>
+</div>
+<div ng-if="country.xselection === 'score'" class="country">
+  <score></score>
+</div>
+<div ng-if="country.xselection === 'artifacts'" class="country">
+  <artifacts></artifacts>
+</div>
+<div ng-if="country.xselection === 'forums'" class="country">
+  <forums></forums>
+</div>
+
 </div>

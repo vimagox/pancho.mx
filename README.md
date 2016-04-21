@@ -6,3 +6,7 @@ It's time to use Gulp tasks:
 - `$ gulp test:auto` to run your unit tests with Karma in watch mode
 - `$ gulp protractor` to launch your e2e tests with Protractor
 - `$ gulp protractor:dist` to launch your e2e tests with Protractor on the dist files
+
+
+rake db:seed:users (municipioapi)
+export MAPI_AUTHORIZATION=xxx
