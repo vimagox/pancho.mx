@@ -11,9 +11,9 @@ export function GovernmentsDirective() {
       list: '='
     },
     templateUrl: 'app/components/governments/governments.html',
-    link: linkFunc,
+    // link: linkFunc,
     controller: GovernmentsController,
-    controllerAs: 'governments',
+    controllerAs: 'xgovernments',
     bindToController: true
   };
 

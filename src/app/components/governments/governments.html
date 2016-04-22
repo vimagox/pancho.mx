@@ -1,17 +1,14 @@
-  <!-- <div style="height:2em;"></div> -->
-  <div class="row selections" style="xborder:1px solid red;height:{{windowHeight}}px;overflow:hidden;position:relative;">
-    <!-- <div style="position:absolute;bottom:0;left:0;width:100%;height:1em;background-color:#444;z-index:100;"></div> -->
-    <div style="height:30em;overflow-y:scroll;">
-      <div ng-click="governments.select(g)" class="selection-wrapper col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat="g in governments.list">
-        <div class="selection">
-          <div style="position:relative;padding:.5em;">
-            <img style="float:left;height:1em;padding-right:.5em;" ng-src="/assets/images/{{g.government.party}}.png" alt="{{ g.government.party }}">
-            <div>
-              <h3>{{ g.name }}</h3>
-            </div>
-            <div class="visible-xs" style="position:absolute;right:.25em;top:.65em;color:#ddd;"><i class="fa fa-chevron-right"></i></div>
-          </div>
+<div id="governments" style="overflow:auto;padding-bottom:4.25em;background-color:white;">
+  <div ng-click="xgovernments.select(g)" class="selection-wrapper col-xs-12 col-sm-6 col-md-4 col-lg-3"
+        ng-repeat="g in xgovernments.list">
+    <div class="selection" style="border:1px solid #eee;background-color:#fff;">
+      <div style="position:relative;padding:.5em;">
+        <img style="float:left;height:1em;padding-right:.5em;" ng-src="/assets/images/{{g.government.party}}.png" alt="{{ g.government.party }}">
+        <div>
+          <h3>{{ g.name }}</h3>
         </div>
+        <div class="visible-xs" style="position:absolute;right:.25em;top:.65em;color:#ddd;"><i class="fa fa-chevron-right"></i></div>
       </div>
     </div>
   </div>
+</div>

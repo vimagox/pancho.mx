@@ -27,18 +27,21 @@
 .blocks-wrapper {
   .blocks {
     &:first-child {
-      background-color:#e74c3c;
+      background-color:#222;//#e74c3c;
       border-bottom-left-radius:6px;
-      color: #9a2013;
+      // color: #9a2013;
+      color:#777;
     }
     &:nth-child(2) {
-      background-color:#3498d8;
-      color: #12405d;
+      background-color:#333;//3498d8;
+      color:#666;
+      // color: #12405d;
     }
     &:nth-child(3) {
-      background-color:#9b59b6;
+      background-color:#444;//9b59b6;
       border-bottom-right-radius:6px;
-      color: #2c1734;
+      color:#777;
+      // color: #2c1734;
     }
     i {
       padding:.5em 0;
@@ -103,14 +106,13 @@
             border-bottom-left-radius:6px;
           }
           i {
-            padding:.5em 0;
+            padding:.5em 0 .25em 0;
             color:#fff;
           }
           b {
             color: #fff;
             font-weight:bold;
             font-size:1em;
-            margin-top:-.5em;
           }
           .description {
             margin-top:-.5em;

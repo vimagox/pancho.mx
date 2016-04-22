@@ -3,9 +3,11 @@
   height:1em;
   text-align:center;
   position:fixed;
-  bottom:0;
+  bottom:1em;
   left:0;
   border:none;
+  z-index:300;
+  background-color: #fff;
   p {
     color:#222;
     font-size:.75em;

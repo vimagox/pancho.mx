@@ -11,14 +11,14 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
       url: '/mex',
       templateUrl: 'app/country/country.html',
       controller: 'CountryController',
-      controllerAs: 'country'
+      controllerAs: 'xcountry'
     })
     .state('region', {
       url: '/mex/:alias',
       params: { id: null },
       templateUrl: 'app/region/region.html',
       controller: 'RegionController',
-      controllerAs: 'region'
+      controllerAs: 'xregion'
     });
 
   $urlRouterProvider.otherwise('/');

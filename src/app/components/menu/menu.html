@@ -1,5 +1,5 @@
 <div id="xmenu">
-  <div class="xs-menu visible-xs">
+  <div class="xs-menu visible-xs" style="bottom:0;">
     <ul class="row">
       <li class="col-xs-3" ng-click="xmenu.xselect('score')" ng-class="{active: xmenu.xselection === 'score'}"><i class="fa fa-2x fa-star"/><p>Calificación</p></li>
       <li class="col-xs-3" ng-click="xmenu.xselect('artifacts')" ng-class="{active: xmenu.xselection === 'artifacts'}" ><i class="fa fa-2x fa-bullseye"/><p>Propuestas</p></li>
@@ -7,13 +7,13 @@
       <li class="col-xs-3" ng-click="xmenu.xselect('govs')" ng-class="{active: xmenu.xselection === 'govs'}"><i  class="fa fa-2x fa-map"/><p>Estados</p></li>
     </ul>
   </div>
-  <div class="menu hidden-xs">
+  <div class="menu hidden-xs" style="background-color:#000;padding-top:.5em;height:2.25em;">
     <div class="menu-wrapper">
       <ul class="row">
-        <li class="col-xs-3" ng-click="xmenu.xselect('score')" ng-class="{active: xmenu.xselection === 'artifacts'}"><i xclass="fa fa-2x fa-star"/><p>Calificación</p></li>
+        <li class="col-xs-3" ng-click="xmenu.xselect('score')" ng-class="{active: xmenu.xselection === 'score'}"><i xclass="fa fa-2x fa-star"/><p>Calificación</p></li>
         <li class="col-xs-3" ng-click="xmenu.xselect('artifacts')" ng-class="{active: xmenu.xselection === 'artifacts'}"><i xclass="fa fa-2x fa-bullseye"/><p>Propuestas</p></li>
-        <li class="col-xs-3" ng-click="xmenu.xselect('forums')" ng-class="{active: xmenu.xselection === 'artifacts'}"><i xclass="fa fa-2x fa-commenting"/><p>Foros</p></li>
-        <li class="col-xs-3" ng-click="xmenu.xselect('govs')" ng-class="{active: xmenu.xselection === 'artifacts'}"><i xclass="fa fa-2x fa-map"/><p>Estados</p></li>
+        <li class="col-xs-3" ng-click="xmenu.xselect('forums')" ng-class="{active: xmenu.xselection === 'forums'}"><i xclass="fa fa-2x fa-commenting"/><p>Foros</p></li>
+        <li class="col-xs-3" ng-click="xmenu.xselect('govs')" ng-class="{active: xmenu.xselection === 'govs'}"><i xclass="fa fa-2x fa-map"/><p>Estados</p></li>
       </ul>
     </div>
   </div>

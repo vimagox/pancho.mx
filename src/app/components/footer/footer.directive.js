@@ -4,10 +4,11 @@ export function FooterDirective() {
   let directive = {
     restrict: 'E',
     scope: {
+      xborder: '@'
     },
     templateUrl: 'app/components/footer/footer.html',
     controller: FooterController,
-    controllerAs: 'footer',
+    controllerAs: 'xfooter',
     bindToController: true
   };
 
