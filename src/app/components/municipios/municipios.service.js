@@ -4,7 +4,8 @@ export class MunicipiosService {
 
     this.$log = $log;
     this.xhttp = xhttp;
-    this.apiHost = 'http://localhost:3333';
+    // this.apiHost = 'http://localhost:3333';
+    this.apiHost = 'http://api.municipios.com';
   }
 
   country(c, callback) {
