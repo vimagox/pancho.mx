@@ -1,3 +1,6 @@
+// .btn-success {
+//   background-color:#7266ba;
+// }
 .xcontainer {
   max-width:960px;
   margin:0 auto;
@@ -82,15 +85,18 @@
 
       .main-wrapper {
         .main {
-          padding:1em 0 2em 0;
+          padding-top:1em;
           text-align:center;
+          border-radius:4px;
           .btn {
-            width:8em;
-            padding:.5em 0;
+            display:block;
+            width:100%;
+            padding:1em 0;
             border-radius:2px;
-            &:first-child {
-              margin-right:.25em;
-            }
+            margin:1em 0 1em 0;
+          }
+          .btn:first-child {
+            margin-top:2.5em;
           }
         }
       }

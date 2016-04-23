@@ -1,27 +1,21 @@
 export class MainController {
-  constructor ($timeout, webDevTec, toastr) {
+  constructor ($timeout, $scope, $window) {
     'ngInject';
 
-    this.awesomeThings = [];
-    this.classAnimation = '';
-    this.creationDate = 1460555818557;
-    this.toastr = toastr;
+    let w = angular.element($window);
 
-    this.activate($timeout, webDevTec);
-  }
+    $scope.getWindowDimensions = function () {
+      return { 'h': w.height(), 'w': w.width() };
+    };
 
-  activate($timeout, webDevTec) {
-    this.getWebDevTec(webDevTec);
-    $timeout(() => {
-      this.classAnimation = 'rubberBand';
-    }, 4000);
-  }
+    $scope.$watch($scope.getWindowDimensions, newValue => {
+      this.windowHeight = newValue.h;
+      this.windowWidth = newValue.w;
+    }, true);
 
-  getWebDevTec(webDevTec) {
-    this.awesomeThings = webDevTec.getTec();
-
-    angular.forEach(this.awesomeThings, (awesomeThing) => {
-      awesomeThing.rank = Math.random();
+    w.bind('resize', function () {
+      $scope.$apply();
     });
+
   }
 }
