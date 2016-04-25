@@ -4,7 +4,8 @@ export function MenuDirective() {
   let directive = {
     restrict: 'E',
     scope: {
-      xselection: '='
+      xselection: '=',
+      subs: '@'
     },
     templateUrl: 'app/components/menu/menu.html',
     controller: MenuController,

@@ -9,6 +9,7 @@ import { RegionController } from './region/region.controller';
 import { GithubContributorService } from '../app/components/githubContributor/githubContributor.service';
 import { XhttpService } from '../app/components/xhttp/xhttp.service';
 import { MunicipiosService } from '../app/components/municipios/municipios.service';
+import { StorageService } from '../app/components/municipios/storage.service';
 import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service';
 import { NavbarDirective } from '../app/components/navbar/navbar.directive';
 import { GovernmentsDirective } from '../app/components/governments/governments.directive';
@@ -29,6 +30,7 @@ angular.module('app', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMes
   .service('githubContributor', GithubContributorService)
   .service('webDevTec', WebDevTecService)
   .service('municipios', MunicipiosService)
+  .service('xstorage', StorageService)
   .controller('CountryController', CountryController)
   .controller('RegionController', RegionController)
   .controller('MainController', MainController)

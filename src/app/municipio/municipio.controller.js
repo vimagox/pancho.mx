@@ -1,10 +1,9 @@
-export class RegionController {
-  constructor ($log, $stateParams, $scope, $window, municipios) {
+export class MunicipioController {
+  constructor ($log, $stateParams, $window, $scope, municipios, storage) {
     'ngInject';
-    this.xselection = 'score';
-    $log.log($stateParams);
-    $log.log('============================');
-    // municipios.region($stateParams.id, response => this.region = response);
+
+    this.xselection = $stateParams.x || 'score';
+    municipios.municipio($stateParams.id, response => this.municipio = response);
 
     let w = angular.element($window);
 
@@ -20,6 +19,5 @@ export class RegionController {
     w.bind('resize', function () {
       $scope.$apply();
     });
-
   }
 }

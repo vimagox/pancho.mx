@@ -1,9 +1,9 @@
 export class CountryController {
-  constructor ($timeout, $scope, $window, municipios) {
+  constructor ($timeout, $scope, $stateParams, $window, municipios) {
     'ngInject';
 
     this.xselection = 'score';
-    municipios.country('mexico', response => this.country = response)
+    municipios.country($stateParams.id, response => this.country = response)
 
     let w = angular.element($window);
 

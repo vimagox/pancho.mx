@@ -20,12 +20,27 @@ export function GovernmentsDirective() {
 }
 
 class GovernmentsController {
-  constructor ($log, $state) {
+  constructor ($log, $state, $scope, $window, xstorage) {
     'ngInject';
 
     this.$log = $log;
     this.$state = $state;
     this.xselection = 'score';
+
+    let w = angular.element($window);
+
+    $scope.getWindowDimensions = function () {
+      return { 'h': w.height(), 'w': w.width() };
+    };
+
+    $scope.$watch($scope.getWindowDimensions, newValue => {
+      this.windowHeight = newValue.h;
+      this.windowWidth = newValue.w;
+    }, true);
+
+    w.bind('resize', function () {
+      $scope.$apply();
+    });
   }
 
   select(g) {

@@ -1,20 +1,21 @@
-export function ForumsDirective() {
+export function GovvatoDirective() {
   'ngInject';
 
   let directive = {
     restrict: 'E',
     scope: {
+      x: '='
     },
-    templateUrl: '/app/components/forums/forums.html',
-    controller: ForumsController,
-    controllerAs: 'forums',
+    templateUrl: 'app/components/governments/govvato.html',
+    controller: GovvatoController,
+    controllerAs: 'xgovvato',
     bindToController: true
   };
 
   return directive;
 }
 
-class ForumsController {
+class GovvatoController {
   constructor ($log, $state) {
     'ngInject';
 

@@ -1,0 +1,12 @@
+<div style="xborder:4px solid red;position:fixed;height:4em;max-width:960px;z-index:200;width:100%;height:10em;text-align:center;">
+  <div>
+      <div class="visible-xs" style="padding:.5em 0;color:#fff;xborder:1px solid red;background-color:#000;">
+        <div style="text-align:center;width:100%;text-aglin:center;">{{ xgovheader.name }}</div>
+        <div ng-if="xgovheader.back" ui-sref="{{xgovheader.back}}" style="position:absolute;left:.5em;top:.5em;color:#ddd;"><i class="fa fa-chevron-left"></i></div>
+      </div>
+      <div class="hidden-xs" style="text-align:center;width:100%;text-aglin:center;color:#fff;padding:.75em 0;background-color:#000;width:100%;z-index:200;">
+        <div>{{ xgovheader.name }}</div>
+        <div ng-if="xgovheader.back" ng-click="xgovheader.xback(xgovheader.back)"  style="position:absolute;left:-.5em;top:.6em;color:#ddd;"><i class="fa fa-chevron-left"></i></div>
+      </div>
+  </div>
+</div>
