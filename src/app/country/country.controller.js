@@ -2,10 +2,6 @@ export class CountryController {
   constructor ($timeout, $scope, $state, $stateParams, $window, municipios, xstorage) {
     'ngInject';
 
-    console.log("=========================================");
-    console.log($stateParams);
-    console.log("=========================================");
-
     function isNumber(n) {
       return !isNaN(parseFloat(n)) && isFinite(n);
     }
@@ -17,7 +13,6 @@ export class CountryController {
       municipios.municipio($stateParams.id, response => this.country = response);
       this.municipio = {id: $stateParams.id}
     } else if (isNumber($stateParams.id)) { //region
-      console.log($stateParams);
       this.region = {id: $stateParams.id, alias: $stateParams.alias};
       this.municipio = null;
       xstorage.put('regionId', $stateParams.id);

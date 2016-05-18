@@ -5,7 +5,6 @@ import { routerConfig } from './index.route';
 import { runBlock } from './index.run';
 import { MainController } from './main/main.controller';
 import { CountryController } from './country/country.controller';
-import { RegionController } from './region/region.controller';
 import { XhttpService } from '../app/components/xhttp/xhttp.service';
 import { MunicipiosService } from '../app/components/municipios/municipios.service';
 import { StorageService } from '../app/components/municipios/storage.service';
@@ -28,7 +27,6 @@ angular.module('app', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMes
   .service('municipios', MunicipiosService)
   .service('xstorage', StorageService)
   .controller('CountryController', CountryController)
-  .controller('RegionController', RegionController)
   .controller('MainController', MainController)
   .directive('xfooter', FooterDirective)
   .directive('score', ScoreDirective)
