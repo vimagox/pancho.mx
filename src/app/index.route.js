@@ -7,19 +7,20 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
       controller: 'MainController',
       controllerAs: 'xmain'
     })
-    .state('mexico', {
+    .state('pais', {
       url: '/mex',
-      params: { id: 'mexico' },
+      params: { id: 'mexico', selection: 'score' },
       templateUrl: '/app/country/country.html',
       controller: 'CountryController',
       controllerAs: 'xcountry'
     })
-    .state('region', {
-      url: '/mex/:alias',
-      params: { id: 'mexico' },
-      templateUrl: '/app/region/region.html',
-      controller: 'RegionController',
-      controllerAs: 'xregion'
+    .state('pais.region', {
+      url: '/:region',
+      params: { id: '', selection: 'score', alias: '' }
+    })
+    .state('pais.region.municipio', {
+      url: '/:municipio',
+      params: { id: '' }
     });
 
   $urlRouterProvider.otherwise('/');

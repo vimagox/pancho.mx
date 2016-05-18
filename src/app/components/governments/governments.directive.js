@@ -20,7 +20,7 @@ export function GovernmentsDirective() {
 }
 
 class GovernmentsController {
-  constructor ($log, $state, $scope, $window, xstorage) {
+  constructor ($log, $state, $scope, $window) {
     'ngInject';
 
     this.$log = $log;
@@ -44,6 +44,10 @@ class GovernmentsController {
   }
 
   select(g) {
-    this.$state.go(this.link, {alias: g.uid, id: g.id})
+    if (g.id > 10000) {
+      this.$state.go(this.link, {municipio: g.uid, id: g.id, selection: 'score'})
+    }else {
+      this.$state.go(this.link, {region: g.uid, id: g.id, selection: 'score'})
+    }
   }
 }
