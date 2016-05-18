@@ -3,14 +3,14 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: '/app/main/main.html',
+      templateUrl: 'app/main/main.html',
       controller: 'MainController',
       controllerAs: 'xmain'
     })
     .state('pais', {
       url: '/mex',
       params: { id: 'mexico', selection: 'score' },
-      templateUrl: '/app/country/country.html',
+      templateUrl: 'app/country/country.html',
       controller: 'CountryController',
       controllerAs: 'xcountry'
     })

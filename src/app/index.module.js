@@ -17,7 +17,8 @@ import { ArtifactsDirective } from '../app/components/artifacts/artifacts.direct
 import { ForumsDirective } from '../app/components/forums/forums.directive';
 import { MenuDirective } from '../app/components/menu/menu.directive';
 
-angular.module('app', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ui.router', 'ui.bootstrap', 'toastr'])
+angular.module('app', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
+    'ngMessages', 'ngAria', 'ui.router', 'ui.bootstrap', 'toastr'])
   .constant('moment', moment)
   .config(config)
   .config(routerConfig)
