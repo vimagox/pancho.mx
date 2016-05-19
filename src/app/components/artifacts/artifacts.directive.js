@@ -5,7 +5,7 @@ export function ArtifactsDirective() {
     restrict: 'E',
     scope: {
     },
-    templateUrl: '/app/components/artifacts/artifacts.html',
+    templateUrl: 'app/components/artifacts/artifacts.html',
     controller: ArtifactsController,
     controllerAs: 'artifacts',
     bindToController: true

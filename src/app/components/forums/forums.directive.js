@@ -5,7 +5,7 @@ export function ForumsDirective() {
     restrict: 'E',
     scope: {
     },
-    templateUrl: '/app/components/forums/forums.html',
+    templateUrl: 'app/components/forums/forums.html',
     controller: ForumsController,
     controllerAs: 'forums',
     bindToController: true
