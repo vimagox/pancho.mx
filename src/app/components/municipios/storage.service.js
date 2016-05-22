@@ -22,6 +22,7 @@ export class StorageService {
 
   putObject(x, o) { this.$cookies.putObject(x, o); }
   getObject(x) { return this.$cookies.getObject(x); }
+  remove(x) { this.$cookies.remove(x); }
 
   clear() {
     var cookies = this.$cookies.getAll();
