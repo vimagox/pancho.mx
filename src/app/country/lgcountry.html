@@ -12,7 +12,7 @@
 
   <div class="government" style="background-color:#222;xborder:4px solid red;height:11em;">
     <div style="padding-top:.5em;"> </div>
-    <div style="text-align:center;"><img ng-src="/assets/images/{{xcountry.country.government.party}}.png"/></div>
+    <div style="text-align:center;"><img ng-src="/assets/images/{{xcountry.country.government.party || 'blk'}}.png"/></div>
     <div style="padding-top:.25em;"> </div>
     <div style="text-align:center;padding-top:.5em;">{{xcountry.country.government.vato}}</div>
     <div style="text-align:center;padding-top:.25em;">{{xcountry.country.government.period_start}} - {{xcountry.country.government.period_end}}</div>

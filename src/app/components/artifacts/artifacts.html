@@ -1,3 +1,27 @@
-<div id="artifacts">
-  <h1>Propuestas/Quejas</h1>
+<div id="artifacts" style="padding-bottom:4.15em;">
+  <div style="border-bottom:1px solid #efefef;height:4em;background-color:#ccc;color:#222;">
+    <ul class="xheader">
+      <li>Propuestas</li>
+      <li>Quejas</li>
+    </ul>
+  </div>
+  <div ng-repeat="key in [10,9,8,7,6,5]" style="border-bottom:1px solid #f3f3f3;height:8em;">
+    <div style="height:4.35em;padding:1em 1em 1em .5em;color:#666;line-height:1.2em;position:relative;">
+      <div style="width:1em;">
+        <i class="fa fa-1x fa-circle" style="padding-right:.5em;color:#eee;"></i>
+      </div>
+      <div style="position:absolute;left:2em;top:.9em;padding-right:1.1em;">
+        Poder unilateral para anular leyes u otras acciones debidamente aprobadas
+        por el gobierno estatal, reducirle las pensiones a los retirados.
+      </div>
+    </div>
+    <div style="margin:1.15em 0;text-align:right;">
+      <div class="box">
+        <div class="x">{{5*key}}<i class="fa fa-1x fa-comment"></i></div>
+      </div>
+      <div class="box">
+        <div class="x">{{20*key}}<i class="fa fa-1x fa-arrow-up"></i></div>
+      </div>
+    </div>
+  </div>
 </div>

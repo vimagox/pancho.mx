@@ -3,6 +3,45 @@
   h1 {
     text-align:center;
     font-size: 1em;
-    padding:.5em 0;
+  }
+  ul.xheader {
+    list-style: none;
+    padding-left: .5em;
+    li {
+      display: inline-block;
+      padding: 1.5em .5em;
+      text-decoration: underline;
+    }
+  }
+  .box {
+    border:1px solid #eee;
+    border-radius:3px;
+    width:4.25em;
+    height:1.5em;
+    display:inline-block;
+    margin-right:1em;
+    color:#ddd;
+    position:relative;
+    i {
+      padding:0 .5em;
+      color:#ddd;
+      position:absolute;
+      top:.1em;
+      right:.1em;
+      // &.fa-comment {
+      //   color: #aaa;
+      // }
+      // &.fa-arrow-up {
+      //   color: #777;
+      // }
+    }
+    .x {
+      text-align:left;
+      width:4em;
+      height:1.5em;
+      line-height: 1.5em;
+      padding-left:.5em;
+      // border:1px solid red;
+    }
   }
 }
