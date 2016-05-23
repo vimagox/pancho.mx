@@ -4,10 +4,11 @@ export function ArtifactsDirective() {
   let directive = {
     restrict: 'E',
     scope: {
+      title: '@'
     },
     templateUrl: 'app/components/artifacts/artifacts.html',
     controller: ArtifactsController,
-    controllerAs: 'artifacts',
+    controllerAs: 'xartifacts',
     bindToController: true
   };
 

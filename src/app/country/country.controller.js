@@ -1,11 +1,11 @@
 export class CountryController {
-  constructor ($timeout, $scope, $state, $stateParams, $window, municipios, xstorage) {
+  constructor ($log, $timeout, $scope, $state, $stateParams, $window, municipios, xstorage) {
     'ngInject';
 
     // console.log(xstorage.getObject('municipio'));
     // console.log(xstorage.getObject('region'));
     // console.log(xstorage.getObject('country'));
-    console.log($stateParams.id);
+    $log.log($stateParams.id);
     // if (xstorage.getObject('municipio')) {
     //   this.country = xstorage.getObject('municipio');
     // } else if (xstorage.getObject('region')) {
@@ -35,6 +35,10 @@ export class CountryController {
       this.region = null;
       this.municipio = null;
       municipios.country($stateParams.id, response => this.loadCountry(response))
+    }
+
+    this.xselect = function(x) {
+      this.xselection = x;
     }
 
     this.loadCountry = function(c) {

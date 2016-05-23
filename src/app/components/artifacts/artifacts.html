@@ -1,14 +1,21 @@
 <div id="artifacts" style="padding-bottom:4.15em;">
-  <div style="border-bottom:1px solid #efefef;height:4em;background-color:#ccc;color:#222;">
-    <ul class="xheader">
-      <li>Propuestas</li>
-      <li>Quejas</li>
+  <div style="position:relative;border-bottom:1px solid #efefef;height:5em;background-color:{{xartifacts.title==='Propuestas'? '#2ea3ff':'#ff642f'}};color:#222;border:2px solid {{xartifacts.title==='Propuestas'? '#2482cc':'#ff642f'}}">
+    <div ng-if="xcountry.xperiod!=='bookmarked'" style="font-size:1em;position:absolute;top:1em;left:2.1em;">{{xartifacts.title}} mas apoyadas <i class="fa fa-arrow-up"></i> {{xcountry.xperiod==='week'? 'esta':'este'}}:</div>
+    <div ng-if="xcountry.xperiod==='bookmarked'" style="font-size:1em;position:absolute;top:1em;left:2.1em;">{{xartifacts.title}}  que me interesan:</div>
+    <ul class="xheader" style="padding:1.5em 1.5em;" ng-init="xcountry.xperiod='week'">
+      <li ng-click="xcountry.xperiod='week'" style="text-decoration:{{xcountry.xperiod==='week'? 'underline':'none'}};color:{{xcountry.xperiod==='week'? 'white':'#124166'}};">Semana</li>
+      <li ng-click="xcountry.xperiod='month'" style="text-decoration:{{xcountry.xperiod==='month'? 'underline':'none'}};color:{{xcountry.xperiod==='month'? 'white':'#124166'}};">Mes</li>
+      <li ng-click="xcountry.xperiod='year'" style="text-decoration:{{xcountry.xperiod==='year'? 'underline':'none'}};color:{{xcountry.xperiod==='year'? 'white':'#124166'}};">Ano</li>
+      <li ng-click="xcountry.xperiod='term'" style="text-decoration:{{xcountry.xperiod==='term'? 'underline':'none'}};color:{{xcountry.xperiod==='term'? 'white':'#124166'}};">Mandato</li>
     </ul>
+    <div style="position:absolute;bottom:.75em;left:.45em;">
+      <i ng-click="xcountry.xperiod = 'bookmarked'" class="fa fa-1x fa-bookmark" style="color:{{xcountry.xperiod === 'bookmarked'? 'white':'#124166'}};"></i>
+    </div>
   </div>
   <div ng-repeat="key in [10,9,8,7,6,5]" style="border-bottom:1px solid #f3f3f3;height:8em;">
     <div style="height:4.35em;padding:1em 1em 1em .5em;color:#666;line-height:1.2em;position:relative;">
       <div style="width:1em;">
-        <i class="fa fa-1x fa-bookmark" style="padding-right:.5em;color:#aaa;"></i>
+        <i class="fa fa-1x fa-bookmark" style="padding-right:.5em;color:{{xcountry.xperiod === 'bookmarked'? '#2ea3ff':'#aaa'}};"></i>
       </div>
       <div style="position:absolute;left:2em;top:.9em;padding-right:1.1em;">
         Poder unilateral para anular leyes u otras acciones debidamente aprobadas
@@ -28,6 +35,13 @@
           <div class="x">{{20*key}}<i class="fa fa-1x fa-arrow-up"></i></div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div>
+    <div style="height:12em;width:100%;padding:1em;">
+      <button ng-if="xartifacts.title==='Propuestas'" class="btn btn-block" style="font-size:1.35em;padding:.5em;background-color:#2ea3ff;color:#fff;">Mi Propuesta</btn>
+      <button ng-if="xartifacts.title==='Quejas'" class="btn btn-block" style="font-size:1.35em;padding:.5em;background-color:#ff642f;color:#fff;">Mi Queja</btn>
     </div>
   </div>
 </div>

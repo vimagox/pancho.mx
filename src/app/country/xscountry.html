@@ -10,16 +10,13 @@
     </div>
   </div>
 
-  <div ng-click="xmenu.xselect('score')" class="government {{xcountry.country.government.party}}" style="background-color:#eee;color:#222;padding-top:4em;height:{{xcountry.xselection === 'score'? 15:12}}em;position:relative;z-index:100;">
-    <div ng-if="xcountry.xselection !== 'score'" style="position:absolute;right:1em;top:4.75em;xborder:1px solid white;z-index:400;">
+  <div class="government {{xcountry.country.government.party}}" style="background-color:#eee;color:#222;padding-top:4em;height:{{xcountry.xselection === 'score'? 15:12}}em;position:relative;z-index:100;">
+    <div ng-if="xcountry.xselection !== 'score'" ng-click="xcountry.xselection = 'score'" style="position:absolute;right:1em;top:4.25em;z-index:400;padding:.5em 0;">
       <i class="fa fa-1x fa-star" style="color:#222;ffd700;"></i>
       <i class="fa fa-1x fa-star-half-full" style="color:#222;ccc;"></i>
       <i class="fa fa-1x fa-star" style="color:#ccc;"></i>
       <i class="fa fa-1x fa-star" style="color:#ccc;"></i>
       <i class="fa fa-1x fa-star" style="color:#ccc;"></i>
-      <!-- <div style="text-align:center;padding-top:.2em;font-size:.6em;">
-        423 Ciudadanos
-      </div> -->
     </div>
 
     <div style="text-align:center;">
@@ -30,7 +27,7 @@
   </div>
 
 
-  <div style="background-color:#fff;xheight:{{xcountry.windowHeight-254}}px;xborder:5px solid red;z-index:200;">
+  <div style="background-color:#fff;z-index:200;">
     <div ng-if="xcountry.xselection === 'govs'" xclass="country">
       <governments
         name={{xcountry.country.name}}
@@ -42,10 +39,10 @@
       <score></score>
     </div>
     <div ng-if="xcountry.xselection === 'suggestions'" xclass="country">
-      <artifacts></artifacts>
+      <artifacts title='Propuestas'></artifacts>
     </div>
     <div ng-if="xcountry.xselection === 'complaints'" xclass="country">
-      <artifacts></artifacts>
+      <artifacts title='Quejas'></artifacts>
     </div>
     <div ng-if="xcountry.xselection === 'forums'" xclass="country">
       <forums></forums>
