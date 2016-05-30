@@ -10,6 +10,14 @@
     </div>
   </div>
 
+  <div ng-show="xcountry.loading" style="max-width:900px;margin:0 auto;height:{{xcountry.windowHeight-0}}px;background-color:#111;padding-top:6em;overflow:hidden;">
+    <div style="width:100%;text-align:center;">
+      <i class="fa fa-3x fa-spinner fa-spin" style="color:white;"></i>
+    </div>
+  </div>
+
+
+<div ng-hide="xcountry.loading">
   <div class="government {{xcountry.country.government.party}}" style="background-color:#eee;color:#222;padding-top:4em;height:{{xcountry.xselection === 'score'? 15:12}}em;position:relative;z-index:100;">
     <div ng-if="xcountry.xselection !== 'score'" ng-click="xcountry.xselection = 'score'" style="position:absolute;right:1em;top:4.25em;z-index:400;padding:.5em 0;">
       <i class="fa fa-1x fa-star" style="color:#222;ffd700;"></i>
@@ -48,3 +56,4 @@
       <forums></forums>
     </div>
   </div>
+</div>

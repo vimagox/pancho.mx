@@ -2,17 +2,8 @@ export class CountryController {
   constructor ($log, $timeout, $scope, $state, $stateParams, $window, municipios, xstorage) {
     'ngInject';
 
-    // console.log(xstorage.getObject('municipio'));
-    // console.log(xstorage.getObject('region'));
-    // console.log(xstorage.getObject('country'));
+    this.loading = true;
     $log.log($stateParams.id);
-    // if (xstorage.getObject('municipio')) {
-    //   this.country = xstorage.getObject('municipio');
-    // } else if (xstorage.getObject('region')) {
-    //   this.country = xstorage.getObject('region');
-    // } else if (xstorage.getObject('country')) {
-    //   this.country = xstorage.getObject('country');
-    // }
 
     function isNumber(n) {
       return !isNaN(parseFloat(n)) && isFinite(n);
@@ -43,6 +34,7 @@ export class CountryController {
 
     this.loadCountry = function(c) {
       this.country = c;
+      this.loading = false;
       xstorage.putObject('country', c);
       xstorage.remove('region');
       xstorage.remove('municipio');
@@ -50,12 +42,14 @@ export class CountryController {
 
     this.loadRegion = function(r) {
       this.country = r;
+      this.loading = false;
       xstorage.putObject('region', r);
       xstorage.remove('municipio');
     }
 
     this.loadMunicipio = function(m) {
       this.country = m;
+      this.loading = false;
       xstorage.putObject('municipio', m);
     }
 

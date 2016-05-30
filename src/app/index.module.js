@@ -1,4 +1,4 @@
-/* global moment:false */
+/* global moment:false FastClick:false*/
 
 import { config } from './index.config';
 import { routerConfig } from './index.route';
@@ -18,8 +18,9 @@ import { ForumsDirective } from '../app/components/forums/forums.directive';
 import { MenuDirective } from '../app/components/menu/menu.directive';
 
 angular.module('app', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
-    'ngMessages', 'ngAria', 'ui.router', 'ui.bootstrap', 'toastr'])
+    'ngMessages', 'ngAria', 'ui.router', 'ui.bootstrap', 'toastr', 'ng-fastclick'])
   .constant('moment', moment)
+  .constant('FastClick', FastClick)
   .config(config)
   .config(routerConfig)
   .run(runBlock)
