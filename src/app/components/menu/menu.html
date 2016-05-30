@@ -1,6 +1,6 @@
 <div id="xmenu" class="visible-xs">
   <div class="xs-menu" style="bottom:0;">
-    <ul class="row">
+    <ul class="row" ng-hide="xmenu.subs===null || xmenu.subs===''">
       <li class="col-xs-3" ng-click="xmenu.xselect('suggestions')" ng-class="{active: xmenu.xselection === 'suggestions'}"><i class="fa fa-2x fa-bullseye"></i><p>Propuestas</p></li>
       <li class="col-xs-3" ng-click="xmenu.xselect('complaints')" ng-class="{active: xmenu.xselection === 'complaints'}" ><i class="fa fa-2x fa-asterisk"></i><p>Quejas</p></li>
       <li class="col-xs-3" ng-click="xmenu.xselect('forums')" ng-class="{active: xmenu.xselection === 'forums'}"><i class="fa fa-2x fa-commenting"></i><p>Foros</p></li>
