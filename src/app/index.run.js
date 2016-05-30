@@ -1,6 +1,6 @@
-export function runBlock ($log, FastClick, $document) {
+export function runBlock ($log, FastClick, $window) {
   'ngInject';
   $log.debug('runBlock end');
 
-  FastClick.attach($document.body)
+  FastClick.attach($window.document.body)
 }

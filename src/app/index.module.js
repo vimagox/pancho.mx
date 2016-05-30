@@ -18,7 +18,7 @@ import { ForumsDirective } from '../app/components/forums/forums.directive';
 import { MenuDirective } from '../app/components/menu/menu.directive';
 
 angular.module('app', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
-    'ngMessages', 'ngAria', 'ui.router', 'ui.bootstrap', 'toastr', 'ng-fastclick'])
+    'ngMessages', 'ngAria', 'ui.router', 'ui.bootstrap', 'toastr'])
   .constant('moment', moment)
   .constant('FastClick', FastClick)
   .config(config)
