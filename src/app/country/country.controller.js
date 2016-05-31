@@ -3,13 +3,15 @@ export class CountryController {
     'ngInject';
 
     this.loading = true;
-    $log.log($stateParams.id);
+    this.xselection = $stateParams.selection || 'score';
+    this.xname = $stateParams.name;
+
+    $log.log($stateParams);
+    $log.log($stateParams.name);
 
     function isNumber(n) {
       return !isNaN(parseFloat(n)) && isFinite(n);
     }
-
-    this.xselection = $stateParams.selection || 'score';
 
     if (isNumber($stateParams.id) && $stateParams.id>10000) { //municipio
       $stateParams.municipio = $stateParams.alias;

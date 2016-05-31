@@ -45,9 +45,9 @@ class GovernmentsController {
 
   select(g) {
     if (g.id > 10000) {
-      this.$state.go(this.link, {municipio: g.uid, id: g.id, selection: 'score'})
+      this.$state.go(this.link, {municipio: g.uid, id: g.id, selection: 'score', name: g.name})
     }else {
-      this.$state.go(this.link, {region: g.uid, id: g.id, selection: 'score'})
+      this.$state.go(this.link, {region: g.uid, id: g.id, selection: 'score', name: g.name})
     }
   }
 }

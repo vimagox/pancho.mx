@@ -1,7 +1,7 @@
   <div id="government-top" style="position:fixed;width:100%;z-index:200;width:100%;height:{{xcountry.xselection === 'score'? 26:12}}em;text-align:center;">
     <div style="position:relative;">
         <div style="padding:.8em 0;color:#fff;xborder:1px solid red;background-color:#000;height:3em;">
-          <div style="text-align:center;width:100%;text-aglin:center;font-size:1.5em;">{{xcountry.country.name}}</div>
+          <div style="text-align:center;width:100%;text-aglin:center;font-size:1.5em;">{{xcountry.xname}}</div>
           <div ng-if="xcountry.backlink()" ng-click="xcountry.back()" style="position:absolute;left:.35em;top:.65em;color:#ddd;"><i class="fa fa-2x fa-chevron-left"></i></div>
         </div>
     </div>
@@ -18,7 +18,7 @@
 
 
 <div ng-hide="xcountry.loading">
-  <div class="government {{xcountry.country.government.party}}" style="background-color:#eee;color:#222;padding-top:4em;height:{{xcountry.xselection === 'score'? 13:12}}em;position:relative;z-index:100;">
+  <div ng-if="xcountry.xselection === 'score'" class="government {{xcountry.country.government.party}}" style="background-color:#eee;color:#222;padding-top:4em;height:{{xcountry.xselection === 'score'? 13:12}}em;position:relative;z-index:100;">
     <div ng-if="xcountry.xselection !== 'score'" ng-click="xcountry.xselection = 'score'" style="position:absolute;right:1em;top:4.25em;z-index:400;padding:.5em 0;">
       <i class="fa fa-1x fa-star" style="color:#222;ffd700;"></i>
       <i class="fa fa-1x fa-star-half-full" style="color:#222;ccc;"></i>
@@ -34,6 +34,7 @@
     <div style="text-align:center;padding-top:.75em;">{{xcountry.country.government.period_start}} - {{xcountry.country.government.period_end}}</div>
   </div>
 
+  <div ng-if="xcountry.xselection !== 'score'" style="height:3em;"></div>
 
   <div style="background-color:#fff;z-index:200;">
     <div ng-if="xcountry.xselection === 'govs'" xclass="country">

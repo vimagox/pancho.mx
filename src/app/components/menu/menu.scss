@@ -8,17 +8,19 @@
   // border:1px solid red;
   z-index:100;
   ul {
-    padding:0 2em;
+    padding:0 10px;
     li {
+      display:inline-block;
+      width:19%;
       color:#888;
       text-align:center;
-      // border:1px solid red;
+      border:1px solid #000;
       padding-top:.5em;
       &.active {
         color:#fff;
       }
       p {
-        padding-top:.5em;
+        padding-top:.25em;
         padding-bottom:.5em;
         text-align:center;
         font-size:.75em;
