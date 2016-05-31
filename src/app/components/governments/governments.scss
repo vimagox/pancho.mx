@@ -1,6 +1,11 @@
 #governments {
   background-color: #444;
   margin:1em;
+  #xselectable {
+    &.fastclick-touched {
+      background-color:#888;
+    }
+  }
   .government {
     height:12.5em;
     // background-color:#222;
