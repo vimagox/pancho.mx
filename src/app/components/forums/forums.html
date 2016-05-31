@@ -1,17 +1,18 @@
 <div id="artifacts" style="padding-bottom:4.15em;">
-  <div style="position:relative;border-bottom:1px solid #efefef;height:5em;background-color:#fcc000;color:#222;border:2px solid yellow">
-    <div ng-if="xcountry.xperiod !== 'bookmarked'" style="font-size:1em;position:absolute;top:1em;left:2.1em;">Foros con mas participacion ciudadana {{xcountry.xperiod==='week'? 'esta':'este'}}:</div>
-    <div ng-if="xcountry.xperiod === 'bookmarked'" style="font-size:1em;position:absolute;top:1em;left:2.1em;">Foros que me interesan:</div>
-    <ul class="xheader" style="padding:1.5em 1.5em;" ng-init="xcountry.xperiod='week'">
-      <li ng-click="xcountry.xperiod='week'" style="text-decoration:{{xcountry.xperiod==='week'? 'underline':'none'}};color:{{xcountry.xperiod==='week'? 'white':'#124166'}};">Semana</li>
-      <li ng-click="xcountry.xperiod='month'" style="text-decoration:{{xcountry.xperiod==='month'? 'underline':'none'}};color:{{xcountry.xperiod==='month'? 'white':'#124166'}};">Mes</li>
-      <li ng-click="xcountry.xperiod='year'" style="text-decoration:{{xcountry.xperiod==='year'? 'underline':'none'}};color:{{xcountry.xperiod==='year'? 'white':'#124166'}};">Ano</li>
-      <li ng-click="xcountry.xperiod='term'" style="text-decoration:{{xcountry.xperiod==='term'? 'underline':'none'}};color:{{xcountry.xperiod==='term'? 'white':'#124166'}};">Mandato</li>
+  <div style="position:relative;height:6em;font-size:1.3em;background-color:#fcc000;color:#222;">
+    <div ng-if="xcountry.xperiod!=='bookmarked'" style="font-size:.9em;width:100%;padding-top:1.2em;color:white;padding-left:1em;line-height:1.5em;height:3em;"><b style="font-size:1.75em;padding-right:.1em;">Foros</b> con mas participantes <i class="fa fa-2x fa-user"></i> {{xcountry.xperiod==='week'? 'esta':'este'}}</div>
+    <div ng-if="xcountry.xperiod==='bookmarked'" style="font-size:.9em;width:100%;padding-top:1.2em;color:white;padding-left:1em;line-height:1.5em;height:3em;"><b style="font-size:1.75em;padding-right:.1em;">Foros</b> que me interesan.</div>
+    <ul class="xheader" style="padding:0 .5em;margin-top:-.5em;" ng-init="xcountry.xperiod='week'">
+      <li ng-click="xcountry.xperiod='week'" style="text-decoration:{{xcountry.xperiod==='week'? 'xunderline':'none'}};color:{{xcountry.xperiod==='week'? '#fff':'#124166'}};">Semana</li>
+      <li ng-click="xcountry.xperiod='month'" style="text-decoration:{{xcountry.xperiod==='month'? 'xunderline':'none'}};color:{{xcountry.xperiod==='month'? '#fff':'#124166'}};">Mes</li>
+      <li ng-click="xcountry.xperiod='year'" style="text-decoration:{{xcountry.xperiod==='year'? 'xunderline':'none'}};color:{{xcountry.xperiod==='year'? '#fff':'#124166'}};">Año</li>
+      <li ng-click="xcountry.xperiod='term'" style="text-decoration:{{xcountry.xperiod==='term'? 'xunderline':'none'}};color:{{xcountry.xperiod==='term'? '#fff':'#124166'}};">Mandato</li>
     </ul>
-    <div style="position:absolute;bottom:.75em;left:.45em;">
-      <i ng-click="xcountry.xperiod = 'bookmarked'" class="fa fa-1x fa-bookmark" style="color:{{xcountry.xperiod === 'bookmarked'? 'white':'#124166'}};"></i>
+    <div style="position:absolute;bottom:1.1em;right:1em;">
+      <i ng-click="xcountry.xperiod = 'bookmarked'" class="fa fa-2x fa-bookmark" style="font-size:1.3em;color:{{xcountry.xperiod === 'bookmarked'? 'white':'#124166'}};"></i>
     </div>
   </div>
+
   <div ng-repeat="key in [10,9,8,7,6,5]" style="border-bottom:1px solid #f3f3f3;height:8em;">
     <div style="height:4.35em;padding:1em 1em 1em .5em;color:#666;line-height:1.2em;position:relative;">
       <div style="width:1em;">

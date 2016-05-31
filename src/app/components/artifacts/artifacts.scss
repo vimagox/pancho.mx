@@ -17,12 +17,13 @@
   .box {
     border:1px solid #aaa;
     border-radius:3px;
-    width:4.25em;
-    height:1.5em;
+    width:5em;
+    height:2.4em;
     display:inline-block;
     margin-right:1em;
     color:#aaa;
     position:relative;
+    margin-top:-.5em;
     &:hover {
       color:#222;
     }
@@ -30,7 +31,7 @@
       padding:0 .5em;
       color:#aaa;
       position:absolute;
-      top:.1em;
+      top:.5em;
       right:.1em;
       // &.fa-comment {
       //   color: #aaa;
@@ -43,9 +44,8 @@
       text-align:left;
       width:4em;
       height:1.5em;
-      line-height: 1.5em;
+      line-height: 2.5em;
       padding-left:.5em;
-      // border:1px solid red;
     }
   }
 }
