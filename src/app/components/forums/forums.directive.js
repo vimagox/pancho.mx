@@ -7,7 +7,7 @@ export function ForumsDirective() {
     },
     templateUrl: 'app/components/forums/forums.html',
     controller: ForumsController,
-    controllerAs: 'forums',
+    controllerAs: 'xforums',
     bindToController: true
   };
 

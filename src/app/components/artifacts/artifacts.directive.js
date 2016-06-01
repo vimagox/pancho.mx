@@ -4,7 +4,8 @@ export function ArtifactsDirective() {
   let directive = {
     restrict: 'E',
     scope: {
-      title: '@'
+      title: '@',
+      xperiod: '@'
     },
     templateUrl: 'app/components/artifacts/artifacts.html',
     controller: ArtifactsController,

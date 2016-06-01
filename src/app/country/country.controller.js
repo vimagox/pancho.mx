@@ -34,10 +34,15 @@ export class CountryController {
       this.xselection = x;
     }
 
+    this.updatePeriod = function(x) {
+      $log.log(x);
+      this.period = x;
+    }
+
     this.loadCountry = function(c) {
       this.country = c;
       this.loading = false;
-      xstorage.putObject('country', c);
+      xstorage.put('countryName', c.name);
       xstorage.remove('region');
       xstorage.remove('municipio');
     }
@@ -45,14 +50,14 @@ export class CountryController {
     this.loadRegion = function(r) {
       this.country = r;
       this.loading = false;
-      xstorage.putObject('region', r);
+      xstorage.put('regionName', r.name);
       xstorage.remove('municipio');
     }
 
     this.loadMunicipio = function(m) {
       this.country = m;
       this.loading = false;
-      xstorage.putObject('municipio', m);
+      xstorage.put('municipioName', m.name);
     }
 
 
@@ -91,9 +96,13 @@ export class CountryController {
 
     this.back = function() {
       if(this.municipio) {
-        $state.go('pais.region', {id: xstorage.get('regionId'), alias: xstorage.get('regionAlias'), selection: 'govs'});
+        $state.go('pais.region', {id: xstorage.get('regionId'),
+            alias: xstorage.get('regionAlias'), selection: 'govs',
+            name: xstorage.get('regionName')});
       } else if(this.region) {
-        $state.go('pais', {id: '', selection: 'govs'});
+        $log.log(xstorage.getObject('country'));
+        $state.go('pais', {id: '', selection: 'govs',
+            name: xstorage.get('countryName')});
       }
     };
 

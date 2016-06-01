@@ -6,12 +6,26 @@
   }
   ul.xheader {
     list-style: none;
-    padding-left: .5em;
+    padding:4em .5em;
+    font-size:.7em;
     li {
       display: inline-block;
-      padding: 1.5em .5em;
-      color:white;
-      // text-decoration: underline;
+      padding: 3em .5em;
+      color:#124166;
+      z-index:200;
+      width: 5em;
+      text-align: center;
+      background-color:#222;
+      color:#ddd;
+      padding:.5em;
+      border-radius:3px;
+      margin-right:.5em;
+      &.active {
+        background-color:#fff;
+        color:#444;
+        padding:.5em;
+        border-radius:3px;
+      }
     }
   }
   .box {

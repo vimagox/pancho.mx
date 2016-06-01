@@ -1,15 +1,15 @@
 <div id="artifacts" style="padding-bottom:4.15em;">
-  <div style="position:relative;height:6em;font-size:1.3em;background-color:#fcc000;color:#222;">
-    <div ng-if="xcountry.xperiod!=='bookmarked'" style="font-size:.9em;width:100%;padding-top:1.2em;color:white;padding-left:1em;line-height:1.5em;height:3em;"><b style="font-size:1.75em;padding-right:.1em;">Foros</b> con mas participantes <i class="fa fa-2x fa-user"></i> {{xcountry.xperiod==='week'? 'esta':'este'}}</div>
-    <div ng-if="xcountry.xperiod==='bookmarked'" style="font-size:.9em;width:100%;padding-top:1.2em;color:white;padding-left:1em;line-height:1.5em;height:3em;"><b style="font-size:1.75em;padding-right:.1em;">Foros</b> que me interesan.</div>
-    <ul class="xheader" style="padding:0 .5em;margin-top:-.5em;" ng-init="xcountry.xperiod='week'">
-      <li ng-click="xcountry.xperiod='week'" style="text-decoration:{{xcountry.xperiod==='week'? 'xunderline':'none'}};color:{{xcountry.xperiod==='week'? '#fff':'#124166'}};">Semana</li>
-      <li ng-click="xcountry.xperiod='month'" style="text-decoration:{{xcountry.xperiod==='month'? 'xunderline':'none'}};color:{{xcountry.xperiod==='month'? '#fff':'#124166'}};">Mes</li>
-      <li ng-click="xcountry.xperiod='year'" style="text-decoration:{{xcountry.xperiod==='year'? 'xunderline':'none'}};color:{{xcountry.xperiod==='year'? '#fff':'#124166'}};">Año</li>
-      <li ng-click="xcountry.xperiod='term'" style="text-decoration:{{xcountry.xperiod==='term'? 'xunderline':'none'}};color:{{xcountry.xperiod==='term'? '#fff':'#124166'}};">Mandato</li>
+  <div style="position:relative;height:5em;font-size:1.3em;background-color:#fcc000;color:#222;">
+    <div ng-if="xcountry.xperiod!=='bookmarked'" style="font-size:.9em;width:100%;padding-top:.3em;color:white;padding-left:.5em;line-height:1.5em;height:3em;"><b style="font-size:1.75em;padding-right:.1em;">Foros</b> con mas participantes <i class="fa fa-2x fa-user"></i> {{xcountry.xperiod==='week'? 'esta':'este'}}</div>
+    <div ng-if="xcountry.xperiod==='bookmarked'" style="font-size:.9em;width:100%;padding-top:.3em;color:white;padding-left:.5em;line-height:1.5em;height:3em;"><b style="font-size:1.75em;padding-right:.1em;">Foros</b> que me interesan.</div>
+    <ul class="xheader" ng-init="xforums.xperiod='week'" style="margin-top:-3.9em;">
+      <li ng-click="xforums.xperiod='week'" ng-class="{active: xforums.xperiod==='week'}">Semana</li>
+      <li ng-click="xforums.xperiod='month'" ng-class="{active: xforums.xperiod==='month'}">Mes</li>
+      <li ng-click="xforums.xperiod='year'" ng-class="{active: xforums.xperiod==='year'}">Año</li>
+      <li ng-click="xforums.xperiod='term'" ng-class="{active: xforums.xperiod==='term'}">Mandato</li>
     </ul>
-    <div style="position:absolute;bottom:1.1em;right:1em;">
-      <i ng-click="xcountry.xperiod = 'bookmarked'" class="fa fa-2x fa-bookmark" style="font-size:1.3em;color:{{xcountry.xperiod === 'bookmarked'? 'white':'#124166'}};"></i>
+    <div style="position:absolute;bottom:.9em;right:.75em;">
+      <i ng-click="xforums.xperiod = 'bookmarked'" class="fa fa-2x fa-bookmark" style="font-size:1.5em;color:{{xforums.xperiod === 'bookmarked'? 'white':'#000'}};"></i>
     </div>
   </div>
 
