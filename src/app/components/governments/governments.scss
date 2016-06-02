@@ -6,9 +6,21 @@
   background-color:#222;
 }
 
+.ng-click-active {
+  background-color: red;
+  color:#fff;
+}
+
 #governments {
   background-color: #444;
   margin:1em;
+
+  .ng-click-active {
+    background-color: #000;
+    color:#fff;
+  }
+
+
   #xselectable {
     &.fastclick-touched {
       background-color:#888;
