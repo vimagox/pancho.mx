@@ -1,12 +1,16 @@
-.fastclick-touched {
+.select.fastclick-touched {
   background-color:#888;
 }
 
-.fastclick-active {
+.selection {
+  background-color:#fff;
+}
+
+.selection.fastclick-active {
   background-color:#222;
 }
 
-.ng-click-active {
+.selection.ng-click-active {
   background-color: red;
   color:#fff;
 }
@@ -15,7 +19,7 @@
   background-color: #444;
   margin:1em;
 
-  .ng-click-active {
+  .selection.ng-click-active {
     background-color: #000;
     color:#fff;
   }
