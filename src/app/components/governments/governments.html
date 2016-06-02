@@ -1,6 +1,6 @@
 <div class="visible-xs">
   <div id="governments" style="overflow:auto;background-color:white;padding-bottom:1em;">
-    <div id="xselectable" ng-click="xgovernments.select(g)" class="selection-wrapper col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat="g in xgovernments.list" style="-webkit-overflow-scrolling: touch;">
+    <div id="xselectable" ng-click="xgovernments.select(g)" class="fastclickable selection-wrapper col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat="g in xgovernments.list" style="-webkit-overflow-scrolling: touch;">
       <div class="selection" style="border:1px solid #eee;background-color:#fff;height:3em;">
         <div style="position:relative;padding:.5em;">
           <img style="float:left;height:2em;padding-right:.5em;" ng-src="/assets/images/{{g.government.party || 'blk'}}.png" alt="{{ g.government.party }}">
