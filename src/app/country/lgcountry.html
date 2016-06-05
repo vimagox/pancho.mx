@@ -1,55 +1,35 @@
 <div style="width:100%;max-width:900px;margin:0 auto;xborder:4px solid red;">
-
-  <div style="position:fixed;height:4em;z-index:200;width:100%;height:10em;text-align:center;max-width:900px;">
+  <div style="position:fixed;z-index:200;width:100%;height:10em;text-align:center;max-width:900px;">
     <div>
-        <div style="text-align:center;width:100%;text-aglin:center;color:#fff;padding:.75em 0;background-color:#000;width:100%;z-index:200;border-bottom:3px solid {{xcountry.loading? '#333' : 'black'}};">
-          <div>{{ xcountry.country.name }}</div>
+        <div style="text-align:center;color:#fff;padding:1.2em 1em 1em 1em;background-color:#000;width:100%;z-index:200;border-bottom:3px solid {{xcountry.loading? '#333' : 'black'}};">
+          <div>{{ xcountry.xname }}</div>
           <div ng-if="back">
           </div>
           <div ng-if="governments.back" ui-sref="governments.back" style="position:absolute;left:-.5em;top:.6em;color:#ddd;"><i class="fa fa-chevron-left"></i></div>
         </div>
+
+        <div style="text-align:center;width:100%;height:3em;background-color:#111;padding-top:1em;">
+          <div class="lgmenu" style="">
+            <ul style="width:35em;">
+              <li ng-click="xcountry.xselection = 'score'" ng-class="{active: xcountry.xselection === 'score'}"><i xclass="fa fa-2x fa-star"/><p>Gobierno</p></li>
+              <li ng-click="xcountry.xselection = 'suggestions'" ng-class="{active: xcountry.xselection === 'suggestions'}"><i xclass="fa fa-2x fa-star"/><p>Propuestas</p></li>
+              <li ng-click="xcountry.xselection = 'complaints'" ng-class="{active: xcountry.xselection === 'complaints'}"><i xclass="fa fa-2x fa-bullseye"/><p>Quejas</p></li>
+              <li ng-click="xcountry.xselection = 'forums'" ng-class="{active: xcountry.xselection === 'forums'}"><i xclass="fa fa-2x fa-commenting"/><p>Foros</p></li>
+              <li ng-click="xcountry.xselection = 'govs'" ng-class="{active: xcountry.xselection === 'govs'}"><i xclass="fa fa-2x fa-map"/><p>{{xcountry.subs()}}</p></li>
+            </ul>
+          </div>
+        </div>
     </div>
   </div>
 
-  <div ng-show="xcountry.loading" style="max-width:900px;margin:0 auto;height:{{xcountry.windowHeight-0}}px;background-color:#111;padding-top:6em;overflow:hidden;">
+  <div ng-show="xcountry.loading" style="max-width:900px;margin:0 auto;height:{{xcountry.windowHeight-0}}px;background-color:#111;padding-top:8em;overflow:hidden;">
     <div style="width:100%;text-align:center;">
       <i class="fa fa-3x fa-spinner fa-spin" style="color:white;"></i>
     </div>
   </div>
 
-  <div ng-hide="xcountry.loading">
-    <div   class="government" style="background-color:#eee;color:#222;height:11em;font-size:1.5em;position:relative;z-index:100;">
-      <div xng-if="xcountry.xselection !== 'score'" style="position:absolute;right:2em;top:4.5em;xborder:1px solid white;z-index:400;">
-        <i class="fa fa-1x fa-star" style="color:#222;ffd700;"></i>
-        <i class="fa fa-1x fa-star-half-full" style="color:#222;ccc;"></i>
-        <i class="fa fa-1x fa-star" style="color:#ccc;"></i>
-        <i class="fa fa-1x fa-star" style="color:#ccc;"></i>
-        <i class="fa fa-1x fa-star" style="color:#ccc;"></i>
-        <div style="text-align:center;padding-top:1em;font-size:.5em;">
-          423 Ciudadanos
-        </div>
-      </div>
-
-
-      <div style="padding-top:.5em;"> </div>
-      <div style="text-align:center;"><img style="height:3em;" ng-src="/assets/images/{{xcountry.country.government.party || 'blk'}}.png"/></div>
-      <div style="padding-top:.25em;"> </div>
-      <div style="text-align:center;padding-top:.5em;">{{xcountry.country.government.vato}}</div>
-      <div style="text-align:center;padding-top:.25em;">{{xcountry.country.government.period_start}} - {{xcountry.country.government.period_end}}</div>
-    </div>
-
-    <div style="background-color:#000;xpadding:1em;xheight:3.5em;margin:0;">
-      <div class="lgmenu" style="xborder:1px solid red;padding:1em 0;">
-        <ul style="width:28em;">
-          <li ng-click="xcountry.xselection = 'suggestions'" ng-class="{active: xcountry.xselection === 'suggestions'}"><i xclass="fa fa-2x fa-star"/><p>Propuestas</p></li>
-          <li ng-click="xcountry.xselection = 'complaints'" ng-class="{active: xcountry.xselection === 'complaints'}"><i xclass="fa fa-2x fa-bullseye"/><p>Quejas</p></li>
-          <li ng-click="xcountry.xselection = 'forums'" ng-class="{active: xcountry.xselection === 'forums'}"><i xclass="fa fa-2x fa-commenting"/><p>Foros</p></li>
-          <li ng-click="xcountry.xselection = 'govs'" ng-class="{active: xcountry.xselection === 'govs'}"><i xclass="fa fa-2x fa-map"/><p>{{xcountry.subs()}}</p></li>
-        </ul>
-      </div>
-    </div>
-
-    <div style="background-color:#fff;height:{{xcountry.windowHeight-314}}px;xborder:5px solid red;z-index:200;margin-top:0;overflow-y:auto;">
+  <div ng-hide="xcountry.loading" style="padding-top:6.5em;">
+    <div style="background-color:#fff;height:{{xcountry.windowHeight-48}}px;z-index:200;overflow-y:auto;">
       <div ng-if="xcountry.xselection === 'govs'" xclass="country">
         <governments
           name={{xcountry.country.name}}
@@ -58,6 +38,26 @@
           gov=xcountry.country.government></governments>
       </div>
       <div ng-if="xcountry.xselection === 'score'" xclass="country">
+        <div class="government" style="background-color:#eee;color:#222;xheight:{{xcountry.windowHeight-60}}px;font-size:1.5em;position:relative;z-index:100;">
+          <div xng-if="xcountry.xselection !== 'score'" style="position:absolute;right:2em;top:4.5em;xborder:1px solid white;z-index:400;">
+            <i class="fa fa-1x fa-star" style="color:#222;ffd700;"></i>
+            <i class="fa fa-1x fa-star-half-full" style="color:#222;ccc;"></i>
+            <i class="fa fa-1x fa-star" style="color:#ccc;"></i>
+            <i class="fa fa-1x fa-star" style="color:#ccc;"></i>
+            <i class="fa fa-1x fa-star" style="color:#ccc;"></i>
+            <div style="text-align:center;padding-top:1em;font-size:.5em;">
+              423 Ciudadanos
+            </div>
+          </div>
+
+
+          <div style="padding-top:2.5em;"> </div>
+          <div style="text-align:center;"><img style="height:3em;" ng-src="/assets/images/{{xcountry.country.government.party || 'blk'}}.png"/></div>
+          <div style="padding-top:.25em;"> </div>
+          <div style="text-align:center;padding-top:.5em;">{{xcountry.country.government.vato}}</div>
+          <div style="text-align:center;padding-top:.25em;">{{xcountry.country.government.period_start}} - {{xcountry.country.government.period_end}}</div>
+        </div>
+
         <score></score>
       </div>
       <div ng-if="xcountry.xselection === 'suggestions'" xclass="country">
