@@ -1,35 +1,29 @@
-.select.fastclick-touched {
-  background-color:#888;
-}
-
-.selection {
-  background-color:#fff;
-}
-
-.selection.fastclick-active {
-  background-color:#222;
-}
-
-.selection.ng-click-active {
-  background-color: red;
-  color:#fff;
-}
-
 #governments {
   background-color: #444;
   margin:1em;
 
-  .selection.ng-click-active {
-    background-color: #000;
-    color:#fff;
-  }
-
-
   #xselectable {
+    background-color:#fff;
+
     &.fastclick-touched {
       background-color:#888;
     }
+
+    &.fastclick-active {
+      background-color:#222;
+    }
+
+    &.ng-click-active {
+      background-color: #000;
+      color:#fff;
+    }
+
+    &.active {
+      background-color: #444;
+      color:#fff;
+    }
   }
+
   .government {
     height:12.5em;
     // background-color:#222;

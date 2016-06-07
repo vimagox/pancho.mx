@@ -21,6 +21,13 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
     .state('pais.region.municipio', {
       url: '/:municipio',
       params: { id: '', name: '' }
+    })
+    .state('myscore', {
+      url: '/calificaciones',
+      params: { id: '', name: '' },
+      templateUrl: 'app/myscore/myscore.html',
+      controller: 'MyScoreController',
+      controllerAs: 'xmyscore'
     });
 
   $urlRouterProvider.otherwise('/');
