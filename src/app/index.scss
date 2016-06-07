@@ -69,11 +69,9 @@ body {
     }
   }
 
-  @include hover-focus {
-    text-decoration: none;
-  }
   &.focus {
     text-decoration: none;
+    background-color: #000;
   }
 
   &:active,
