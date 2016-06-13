@@ -1,9 +1,70 @@
+#xs-governments {
+  overflow:auto;
+  background-color:white;
+  padding-bottom:5em;
+  z-index:500;
+}
+#lg-governments {
+  overflow:auto;
+  background-color:white;
+  margin:0;
+  .xselection {
+    border:1px solid #eee;
+    background-color:#fff;
+    padding:.25em 0;
+    font-size:1.2em;
+    &.hover {
+      background-color: #222;
+    }
+    .xselection-item {
+      position:relative;
+      padding:.5em;
+      img {
+        float:left;
+        height:1em;
+        padding-right:.5em;
+      }
+    }
+  }
+}
 #governments {
   background-color: #444;
   margin:1em;
 
+  .xselection {
+    border:1px solid #eee;
+    height:3em;
+    width:100%;
+    z-index:600;
+    &:hover {
+      background-color: #eee;
+      border:1px solid #ccc;
+    }
+    .xselection-item {
+      position:relative;
+      padding:.5em;
+      img {
+        float:left;
+        height:2em;
+        padding-right:.5em;
+      }
+      h3 {
+        padding-top:.5em;
+        text-align:left;
+        width:100%;
+      }
+      .xselection-chevron {
+        position:absolute;
+        right:.25em;
+        top:1em;
+        color:#ddd;
+      }
+    }
+  }
+
   #xselectable {
     background-color:#fff;
+    -webkit-overflow-scrolling: touch;
 
     &.fastclick-touched {
       background-color:#888;
@@ -21,6 +82,9 @@
     &.active {
       background-color: #444;
       color:#fff;
+    }
+    &:last-child {
+      padding-bottom:5em;
     }
   }
 
@@ -50,6 +114,7 @@
       }
     }
   }
+
 
   // .selections {
     // padding:1em 2em;
