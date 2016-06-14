@@ -3,6 +3,31 @@
   padding:0;
 }
 
+.patras {
+  position:absolute;
+  padding:.4em .8em .4em .4em;
+  left:.1em;top:.1em;
+  color:#fff;
+  opacity:.7;
+  &:hover {
+    background-color: #222;
+    opacity: 1;
+  }
+}
+
+.pamenu {
+  position:absolute;
+  top:0em;
+  right:0em;
+  padding:.5em .5em .4em .5em;
+  color:#fff;
+  opacity:.7;
+  &:hover {
+    background-color: #222;
+    opacity: 1;
+  }
+}
+
 .lgmenu {
   ul {
     width:28em;

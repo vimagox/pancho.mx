@@ -13,13 +13,16 @@ import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service'
 import { NavbarDirective } from '../app/components/navbar/navbar.directive';
 import { GovernmentsDirective } from '../app/components/governments/governments.directive';
 import { FooterDirective } from '../app/components/footer/footer.directive';
+import { TabsDirective } from '../app/components/tabs/tabs.directive';
 import { ScoreDirective } from '../app/components/score/score.directive';
 import { ArtifactsDirective } from '../app/components/artifacts/artifacts.directive';
-import { ForumsDirective } from '../app/components/forums/forums.directive';
 import { MenuDirective } from '../app/components/menu/menu.directive';
 
 angular.module('app', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
-    'ngMessages', 'ngAria', 'ui.router', 'ui.bootstrap', 'toastr'])
+    'ngMessages', 'ngAria', 'ui.router', 'ui.bootstrap',
+    'ngMaterial',
+    // 'material.svgAssetsCache', 
+    'toastr'])
   .constant('moment', moment)
   .constant('FastClick', FastClick)
   .config(config)
@@ -34,8 +37,8 @@ angular.module('app', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
   .controller('MainController', MainController)
   .directive('xfooter', FooterDirective)
   .directive('score', ScoreDirective)
+  .directive('tabs', TabsDirective)
   .directive('artifacts', ArtifactsDirective)
-  .directive('forums', ForumsDirective)
   .directive('xmenu', MenuDirective)
   .directive('acmeNavbar', NavbarDirective)
   .directive('governments', GovernmentsDirective);

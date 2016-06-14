@@ -2,11 +2,11 @@
   <div style="position:relative;">
     <div style="padding:.8em 0;color:#fff;xborder:1px solid red;background-color:#000;height:3em;">
       <div style="text-align:center;width:100%;text-aglin:center;font-size:1.5em;">{{xcountry.xname}}</div>
-      <div ng-if="xcountry.backlink()" ng-click="xcountry.back()" style="position:absolute;left:.35em;top:.65em;color:#ddd;"><i class="fa fa-2x fa-chevron-left"></i></div>
+      <div ng-if="xcountry.backlink()" ng-click="xcountry.back()" class="patras" ><i class="fa fa-2x fa-arrow-left"></i></div>
     </div>
   </div>
-  <div style="position:absolute;top:.6em;right:.65em;">
-    <i class="fa fa-2x fa-bars" style="color:white;"></i>
+  <div class="pamenu" ui-sref="mainmenu">
+    <i class="fa fa-2x fa-bars"></i>
   </div>
 </div>
 
@@ -18,14 +18,6 @@
 
 <div ng-hide="xcountry.loading">
   <div ng-if="xcountry.xselection === 'score'" class="government {{xcountry.country.government.party}}" style="background-color:#eee;color:#222;padding-top:4em;height:{{xcountry.xselection === 'score'? 13:12}}em;position:relative;z-index:100;">
-    <div ng-if="xcountry.xselection !== 'score'" ng-click="xcountry.xselection = 'score'" style="position:absolute;right:1em;top:4.25em;z-index:400;padding:.5em 0;">
-      <i class="fa fa-1x fa-star" style="color:#222;ffd700;"></i>
-      <i class="fa fa-1x fa-star-half-full" style="color:#222;ccc;"></i>
-      <i class="fa fa-1x fa-star" style="color:#ccc;"></i>
-      <i class="fa fa-1x fa-star" style="color:#ccc;"></i>
-      <i class="fa fa-1x fa-star" style="color:#ccc;"></i>
-    </div>
-
     <div style="text-align:center;">
       <img style="height:{{xcountry.xselection === 'score'? 4:3}}em;border:2px solid white;background-color:white;border-radius:3px;" ng-src="/assets/images/{{xcountry.country.government.party || 'blk'}}.png" style="height:2em;"/>
     </div>
@@ -43,17 +35,20 @@
         list=xcountry.govs()
         gov=xcountry.country.government></governments>
     </div>
-    <div ng-if="xcountry.xselection === 'score'" xclass="country">
+    <div ng-if="xcountry.xselection === 'score'">
       <score></score>
     </div>
-    <div ng-if="xcountry.xselection === 'suggestions'" xclass="country">
+    <div ng-if="xcountry.xselection === 'suggestions'">
       <artifacts title='Propuestas'></artifacts>
     </div>
-    <div ng-if="xcountry.xselection === 'complaints'" xclass="country">
+    <div ng-if="xcountry.xselection === 'complaints'">
       <artifacts title='Quejas'></artifacts>
     </div>
-    <div ng-if="xcountry.xselection === 'forums'" xclass="country">
+    <div ng-if="xcountry.xselection === 'forums'">
       <artifacts title='Foros'></artifacts>
+    </div>
+    <div ng-if="xcountry.xselection === 'govs' && xcountry.subs() === 'General'">
+      <tabs></tabs>
     </div>
   </div>
 </div>

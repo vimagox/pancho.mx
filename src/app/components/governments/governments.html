@@ -15,8 +15,8 @@
 </div>
 
 <div class="hidden-xs">
-  <div id="governments lg-governments">
-    <div ng-click="xgovernments.select(g)" class="selection-wrapper col-md-4" ng-repeat="g in xgovernments.list">
+  <div id="governments lg-governments" ng-cloak>
+    <div ng-click="xgovernments.select(g)" class="selection-wrapper col-md-4" ng-repeat="g in xgovernments.list track by $index">
       <div class="xselection">
         <div class="xselection-item">
           <img ng-src="/assets/images/{{g.government.party || 'blk'}}.png" alt="{{ g.government.party }}">

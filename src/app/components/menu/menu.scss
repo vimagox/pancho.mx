@@ -5,11 +5,11 @@
   width:100%;
   background-color:#000;
   height:4em;
-  // border:1px solid red;
   z-index:100;
   ul {
     padding:0 10px;
     li {
+      position:relative;
       display:inline-block;
       width:19%;
       color:#888;
@@ -24,6 +24,16 @@
         padding-bottom:.5em;
         text-align:center;
         font-size:.75em;
+      }
+      img {
+        position:absolute;
+        top:-1.6em;
+        left:1.5em;
+        height:2.3em;
+        opacity:.5;
+        &.active {
+          opacity: 1;
+        }
       }
     }
   }

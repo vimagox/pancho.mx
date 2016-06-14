@@ -113,7 +113,7 @@ export class CountryController {
         } else if (this.country.municipios) {
           return 'Municipios';
         } else {
-          return 'Comunicados'
+          return 'General'
         }
       }
     }

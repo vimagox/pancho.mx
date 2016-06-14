@@ -1,21 +1,74 @@
 #score {
   background-color:white;
+  .fa-star {
+    color:#D4AF37;
+  }
+  .off {
+    color:#ddd;
+  }
+  .myscore {
+    background-color:#D4AF37;
+    border-radius:4px;
+    width:17.3em;
+    margin:2em auto;
+    padding:1em;
+    text-align:center;
+    color:white;
+    border-radius:3px;
+  }
   h1 {
     text-align:center;
     font-size: 1em;
     padding:.5em 0;
   }
   .board {
-    background-color:#bbb;
+    background-color:#000;
     margin:1em;
     border-top-radius:3px;
     width:17em;
     margin:0 auto;
     padding:.5em .5em 1em .5em;
-    border-radius:3px;
-    border:2px solid #999;
+    border-radius:6px;
+    .title {
+      padding:.5em;
+      position:relative;
+      height:1.75em;
+      font-size:.75em;
+      color:#fff;
+    }
+    .title-right {
+      position:absolute;
+      right:.6em;
+      top:.41em;
+      width:6em;
+      text-align:right;
+    }
     .fa-star {
-      font-size:.5em;
+      font-size:.75em;
+    }
+    .board-row {
+      &.first-child {
+        border-top:1px solid #444;
+      }
+      padding:.25em .5em .25em .5em;
+      border-bottom:2px solid #555;
+
+      position:relative;
+      .description {
+        font-size:.75em;
+        padding-left:1em;
+        color:#fff;
+      }
+      .score {
+        position:absolute;
+        right:.6em;
+        top:.5em;
+        color:#000;
+        width:6em;
+        text-align:right;
+        font-size:.85em;
+        color:#fff;
+      }
     }
   }
 }

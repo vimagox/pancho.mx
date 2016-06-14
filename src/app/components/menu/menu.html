@@ -5,7 +5,8 @@
       <li ng-click="xmenu.xselect('suggestions')" ng-class="{active: xmenu.xselection === 'suggestions'}"><i class="fa fa-2x fa-bullseye"></i><p>Propuestas</p></li>
       <li ng-click="xmenu.xselect('complaints')" ng-class="{active: xmenu.xselection === 'complaints'}" ><i class="fa fa-2x fa-asterisk"></i><p>Quejas</p></li>
       <li ng-click="xmenu.xselect('forums')" ng-class="{active: xmenu.xselection === 'forums'}"><i class="fa fa-2x fa-commenting"></i><p>Foros</p></li>
-      <li ng-click="xmenu.xselect('govs')" ng-class="{active: xmenu.xselection === 'govs'}"><i  class="fa fa-2x fa-{{xmenu.subs==='Comunicados'? 'bullhorn' : 'map'}}"></i><p>{{xmenu.subs}}</p></li>
+      <li ng-if="xmenu.subs!=='General'" ng-click="xmenu.xselect('govs')" ng-class="{active: xmenu.xselection === 'govs'}"><i  class="fa fa-2x fa-map"></i><p>{{xmenu.subs}}</p></li>
+      <li ng-if="xmenu.subs==='General'" ng-class="{active: xmenu.xselection === 'govs'}" ng-click="xmenu.xselect('govs')"><img ng-class="{active: xmenu.xselection === 'govs'}" src='assets/images/pancho.png'></img><p>General</p></li>
     </ul>
   </div>
 </div>
