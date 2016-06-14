@@ -1,0 +1,31 @@
+<div class="sublinks">
+  <a ng-click="xartifacts.sublink=1" style="background-color: {{xartifacts.sublink===1?xartifacts.xcolor:'#666'}}">Semanal</a>
+  <a ng-click="xartifacts.sublink=2" style="background-color: {{xartifacts.sublink===2?xartifacts.xcolor:'#666'}}">Mensual</a>
+  <a ng-click="xartifacts.sublink=3" style="background-color: {{xartifacts.sublink===3?xartifacts.xcolor:'#666'}}">Mandato</a>
+</div>
+
+<div ng-repeat="key in [10,9,8,7,6,5]" style="border-bottom:1px solid #f3f3f3;height:8em;">
+  <div style="height:4.35em;padding:1em 1em 1em .5em;color:#666;line-height:1.2em;position:relative;">
+    <div style="width:1em;position:absolute;right:.5em;top:1em;">
+      <i class="fa fa-1x fa-bookmark" style="padding-right:.5em;color:{{xartifacts.xperiod === 'bookmarked'? '#2ea3ff':'#aaa'}};"></i>
+    </div>
+    <div style="position:absolute;left:.5em;top:.9em;padding-right:1.1em;">
+      Poder unilateral para anular leyes u otras acciones debidamente aprobadas
+      por el gobierno estatal, reducirle las pensiones a los retirados.
+    </div>
+  </div>
+  <div style="margin:1.15em 0;">
+    <div style="float:left;padding-top:.35em;padding-left:1.75em;color:#ddd;">
+      <!-- <img src="/assets/images/evo1.jpg" style="height:2em;"></img> -->
+      J.K. Rolling
+    </div>
+    <div style="float:right;">
+      <div class="box">
+        <div class="x">{{5*key}}<i class="fa fa-1x fa-comment"></i></div>
+      </div>
+      <div class="box">
+        <div class="x">{{20*key}}<i class="fa fa-1x fa-arrow-up"></i></div>
+      </div>
+    </div>
+  </div>
+</div>

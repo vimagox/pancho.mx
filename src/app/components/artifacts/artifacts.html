@@ -1,47 +1,24 @@
 <div id="artifacts" style="padding-bottom:4.15em;">
-  <div style="position:relative;height:5em;background-color:{{xartifacts.title==='Propuestas'? '#2ea3ff':'#ff642f'}};color:#fff;font-size:1.3em;">
-    <div ng-if="xartifacts.xperiod!=='bookmarked'" style="font-size:1em;position:absolute;top:.1em;left:.5em;"><b style="font-size:1.5em;padding-right:.1em;">{{xartifacts.title}}</b> mas apoyadas <i class="fa fa-2x fa-arrow-up"></i> {{xartifacts.xperiod==='week'? 'esta':'este'}}</div>
-    <div ng-if="xartifacts.xperiod==='bookmarked'" style="font-size:1em;position:absolute;top:.1em;left:.5em;"><b style="font-size:1.5em;padding-right:.1em;">{{xartifacts.title}}</b>  que me interesan.</div>
-    <ul class="xheader">
-      <li ng-click="xartifacts.xperiod='week'" ng-class="{active: xartifacts.xperiod==='week'}">Semana</li>
-      <li ng-click="xartifacts.xperiod='month'" ng-class="{active: xartifacts.xperiod==='month'}">Mes</li>
-      <li ng-click="xartifacts.xperiod='year'" ng-class="{active: xartifacts.xperiod==='year'}">Año</li>
-      <li ng-click="xartifacts.xperiod='term'" ng-class="{active: xartifacts.xperiod==='term'}">Mandato</li>
-    </ul>
-    <div style="position:absolute;bottom:.9em;right:.75em;">
-      <i ng-click="xartifacts.xperiod = 'bookmarked'" class="fa fa-2x fa-bookmark" style="font-size:1.5em;color:{{xartifacts.xperiod === 'bookmarked'? 'white':'#000'}};"></i>
-    </div>
+  <div style="position:relative;height:2.5em;background-color:{{xartifacts.xcolor}};color:#fff;font-size:1.3em;">
+    <div style="font-size:1.3em;width:100%;text-align:center;padding:.5em 0;"><b>{{xartifacts.title}}</b></div>
   </div>
-  <div ng-repeat="key in [10,9,8,7,6,5]" style="border-bottom:1px solid #f3f3f3;height:8em;">
-    <div style="height:4.35em;padding:1em 1em 1em .5em;color:#666;line-height:1.2em;position:relative;">
-      <div style="width:1em;position:absolute;right:.5em;top:1em;">
-        <i class="fa fa-1x fa-bookmark" style="padding-right:.5em;color:{{xartifacts.xperiod === 'bookmarked'? '#2ea3ff':'#aaa'}};"></i>
-      </div>
-      <div style="position:absolute;left:.5em;top:.9em;padding-right:1.1em;">
-        Poder unilateral para anular leyes u otras acciones debidamente aprobadas
-        por el gobierno estatal, reducirle las pensiones a los retirados.
-      </div>
+
+  <div class="xmenu" ng-init="xartifacts.menu=1" style="color:{{xartifacts.xcolor}}">
+    <div style="display:inline-block;text-align:left;">
+      <a ng-click="xartifacts.menu=1" style="color:{{xartifacts.menu===1?xartifacts.xcolor:'#666'}}">Populares</a>
+      <a ng-click="xartifacts.menu=2" style="color:{{xartifacts.menu===2?xartifacts.xcolor:'#666'}}">Recientes</a>
     </div>
-    <div style="margin:1.15em 0;">
-      <div style="float:left;padding-top:.35em;padding-left:1.75em;color:#ddd;">
-        <!-- <img src="/assets/images/evo1.jpg" style="height:2em;"></img> -->
-        J.K. Rolling
-      </div>
-      <div style="float:right;">
-        <div class="box">
-          <div class="x">{{5*key}}<i class="fa fa-1x fa-comment"></i></div>
-        </div>
-        <div class="box">
-          <div class="x">{{20*key}}<i class="fa fa-1x fa-arrow-up"></i></div>
-        </div>
-      </div>
+    <div style="float:right;margin-top:-.5em;">
+      <a ng-click="xartifacts.menu=4" style="color:{{xartifacts.menu===4?xartifacts.xcolor:'#666'}}"><i style="font-size:1.5em;" class="fa fa-2x fa-plus-square"></i></a>
+      <a ng-click="xartifacts.menu=3" style="color:{{xartifacts.menu===3?xartifacts.xcolor:'#666'}}"><i style="font-size:1.5em;" class="fa fa-2x fa-bookmark"></i></a>
     </div>
   </div>
 
-  <div>
-    <div style="height:12em;width:100%;padding:1em;">
-      <button ng-if="xartifacts.title==='Propuestas'" class="btn btn-block" style="font-size:1.35em;padding:.5em;background-color:#2ea3ff;color:#fff;">Mi Propuesta</btn>
-      <button ng-if="xartifacts.title==='Quejas'" class="btn btn-block" style="font-size:1.35em;padding:.5em;background-color:#ff642f;color:#fff;">Mi Queja</btn>
-    </div>
-  </div>
+
+  <hr style="color:{{xartifacts.xcolor}};border:2px solid {{xartifacts.xcolor}};margin:1em .5em;">
+
+  <div ng-if="xartifacts.menu===1" ng-include src="'app/components/artifacts/popular.html'"></div>
+  <div ng-if="xartifacts.menu===2" ng-include src="'app/components/artifacts/recent.html'"></div>
+  <div ng-if="xartifacts.menu===3" ng-include src="'app/components/artifacts/bookmarked.html'"></div>
+  <div ng-if="xartifacts.menu===4" ng-include src="'app/components/artifacts/new.html'"></div>
 </div>
