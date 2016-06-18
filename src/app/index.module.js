@@ -8,6 +8,8 @@ import { CountryController } from './country/country.controller';
 import { MyScoreController } from './myscore/myscore.controller';
 import { ArtifactController } from './artifact/artifact.controller';
 import { LoginController } from './login/login.controller';
+import { RegisterController } from './register/register.controller';
+import { ForgotController } from './forgot/forgot.controller';
 import { XhttpService } from '../app/components/xhttp/xhttp.service';
 import { MunicipiosService } from '../app/components/municipios/municipios.service';
 import { StorageService } from '../app/components/municipios/storage.service';
@@ -40,6 +42,8 @@ angular.module('app', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
   .controller('MyScoreController', MyScoreController)
   .controller('MainController', MainController)
   .controller('LoginController', LoginController)
+  .controller('RegisterController', RegisterController)
+  .controller('ForgotController', ForgotController)
   .directive('xfooter', FooterDirective)
   .directive('score', ScoreDirective)
   .directive('tabs', TabsDirective)

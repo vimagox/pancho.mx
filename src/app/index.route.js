@@ -42,6 +42,20 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
       templateUrl: 'app/login/login.html',
       controller: 'LoginController',
       controllerAs: 'lc'
+    })
+    .state('register', {
+      url: '/register',
+      params: { id: '', name: '' },
+      templateUrl: 'app/register/register.html',
+      controller: 'RegisterController',
+      controllerAs: 'rc'
+    })
+    .state('forgot', {
+      url: '/forgot',
+      params: { id: '', name: '' },
+      templateUrl: 'app/forgot/forgot.html',
+      controller: 'ForgotController',
+      controllerAs: 'fc'
     });
 
   $urlRouterProvider.otherwise('/');

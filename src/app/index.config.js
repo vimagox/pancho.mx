@@ -1,4 +1,4 @@
-export function config ($logProvider, $locationProvider, $urlRouterProvider, toastrConfig) {
+export function config ($logProvider, $locationProvider, $urlRouterProvider, toastrConfig, $mdThemingProvider) {
   'ngInject';
   // Enable log
   $logProvider.debugEnabled(true);
@@ -16,6 +16,11 @@ export function config ($logProvider, $locationProvider, $urlRouterProvider, toa
   toastrConfig.positionClass = 'toast-top-right';
   toastrConfig.preventDuplicates = true;
   toastrConfig.progressBar = true;
+
+  // Configure a dark theme with primary foreground yellow
+  $mdThemingProvider.theme('docs-dark', 'default')
+    .primaryPalette('yellow')
+    .dark();
 }
 
 // angular.module('MyApp',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])

@@ -1,4 +1,4 @@
-<div id="login" layout="column" ng-cloak style="width:100%;max-width:900px;margin:0 auto;background-color:#fff;height:{{lc.windowHeight}}px;">
+<div id="login" layout="column" class="md-inline-form" ng-cloak style="width:100%;max-width:900px;margin:0 auto;background-color:#fff;height:{{lc.windowHeight}}px;font-size:1.25em;background-color:#424242;">
 
   <md-toolbar class="md-info">
     <div class="md-toolbar-tools">
@@ -8,9 +8,29 @@
       </md-button>
     </div>
   </md-toolbar>
-  <md-content flex layout-padding>
 
-
+  <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
+    <div style="padding:1em 2em 0 2em;">
+      <md-input-container style="width:100%;">
+        <label>Correo Electronico</label>
+        <input ng-model="user.title" type="email">
+      </md-input-container>
+    </div>
+    <div style="margin-top:-1em;padding:0 2em 0 2em">
+      <md-input-container style="width:100%;">
+        <label>Contraseña</label>
+        <input ng-model="user.email" type="password">
+      </md-input-container>
+    </div>
+    <div style="margin-top:-.5em;padding:0 2em 2em 2em;">
+      <md-button ng-disabled=true class="md-raised md-primary" style="width:100%;margin:0;padding:.5em 0;">Login</md-button>
+      <div style="text-align:center;width:100%;margin-top:1em;">
+        <a ui-sref="forgot" style="cursor:pointer;text-decoration:underline;text-align:center;font-size:.7em;color:#fff;width:100%;margin-top:1em;">Se me olvido otra vez</a>
+      </div>
+    </div>
+    <div style="margin-top:4em;padding:0 2em 2em 2em;">
+      <md-button ui-sref="register" class="md-raised md-secondary" style="width:100%;margin:0;padding:.5em 0;">Registrar mi cuenta</md-button>
+    </div>
   </md-content>
 
 </div>

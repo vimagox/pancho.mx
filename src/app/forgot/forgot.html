@@ -1,0 +1,24 @@
+<div layout="column" ng-cloak style="width:100%;max-width:900px;margin:0 auto;background-color:#424242;height:{{fc.windowHeight}}px;">
+
+  <md-toolbar class="md-warn">
+    <div class="md-toolbar-tools">
+      <h2 class="md-flex">Olvide mi contraseña</h2>
+      <md-button class="md-icon-button" ng-click="rc.cancel()">
+        <md-icon md-svg-src="assets/images/icons/ic_close_24px.svg" aria-label="Close"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+
+  <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
+    <div style="padding:1em 2em 0 2em;">
+      <md-input-container style="width:100%;">
+        <label>Correo Electronico</label>
+        <input ng-model="user.title" type="email">
+      </md-input-container>
+    </div>
+    <div style="margin-top:1em;padding:0 2em 2em 2em;">
+      <md-button ui-sref="login" class="md-raised md-secondary" style="width:100%;margin:0;padding:.5em 0;">Resetear contraseña</md-button>
+    </div>
+  </md-content>
+
+</div>
