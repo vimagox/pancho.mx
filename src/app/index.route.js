@@ -28,6 +28,20 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
       templateUrl: 'app/myscore/myscore.html',
       controller: 'MyScoreController',
       controllerAs: 'xmyscore'
+    })
+    .state('artifact', {
+      url: '/artifact',
+      params: { id: '', name: '' },
+      templateUrl: 'app/artifact/artifact.html',
+      controller: 'ArtifactController',
+      controllerAs: 'xa'
+    })
+    .state('login', {
+      url: '/login',
+      params: { id: '', name: '' },
+      templateUrl: 'app/login/login.html',
+      controller: 'LoginController',
+      controllerAs: 'lc'
     });
 
   $urlRouterProvider.otherwise('/');

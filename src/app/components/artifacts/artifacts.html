@@ -1,7 +1,9 @@
 <div id="artifacts" style="padding-bottom:4.15em;">
-  <div style="position:relative;height:2.5em;background-color:{{xartifacts.xcolor}};color:#fff;font-size:1.3em;">
-    <div style="font-size:1.3em;width:100%;text-align:center;padding:.5em 0;"><b>{{xartifacts.title}}</b></div>
+  <div style="position:relative;height:3em;background-color:{{xartifacts.xcolor}};color:#fff;font-size:1.3em;">
+    <div style="font-size:1.3em;width:100%;text-align:center;padding:.2em 0;"><b>{{xartifacts.title}}</b></div>
+    <div style="text-align:center;color:#aaa;padding:0;font-size:.7em;color:#fff;margin-top:0em;">{{xartifacts.title}} {{xartifacts.level}}</div>
   </div>
+
 
   <div class="xmenu" ng-init="xartifacts.menu=1" style="color:{{xartifacts.xcolor}}">
     <div style="display:inline-block;text-align:left;">
@@ -13,7 +15,6 @@
       <a ng-click="xartifacts.menu=3" style="color:{{xartifacts.menu===3?xartifacts.xcolor:'#666'}}"><i style="font-size:1.5em;" class="fa fa-2x fa-bookmark"></i></a>
     </div>
   </div>
-
 
   <hr style="color:{{xartifacts.xcolor}};border:2px solid {{xartifacts.xcolor}};margin:1em .5em;">
 

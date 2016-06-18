@@ -4,6 +4,7 @@ export function ArtifactsDirective() {
   let directive = {
     restrict: 'E',
     scope: {
+      level: '@',
       title: '@',
       xperiod: '@'
     },
@@ -17,7 +18,7 @@ export function ArtifactsDirective() {
 }
 
 class ArtifactsController {
-  constructor ($log, $state, $scope, $window) {
+  constructor ($log, $state, $scope, $window, $timeout, $mdBottomSheet) {
     'ngInject';
 
     var colors = {
@@ -29,7 +30,6 @@ class ArtifactsController {
     this.$log = $log;
     this.$state = $state;
     this.sublink = 1;
-    this.level = 'Nacional';
 
     this.expanded = true;
     this.xcolor = colors[this.title.toLowerCase()]
@@ -48,6 +48,19 @@ class ArtifactsController {
     w.bind('resize', function () {
       $scope.$apply();
     });
+
+    this.alert = '';
+
+    this.items = [
+      { name: 'Apoyar', icon: 'pri' },
+      { name: 'Remover', icon: 'pan' },
+      { name: 'Reportar', icon: 'prd' }
+    ];
+
+    this.listItemClick = function($index) {
+      var clickedItem = this.items[$index];
+      $mdBottomSheet.hide(clickedItem);
+    };
 
   }
 }

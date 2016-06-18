@@ -10,22 +10,16 @@
   </div>
 </div>
 
-<div ng-show="xcountry.loading" style="max-width:900px;margin:0 auto;height:{{xcountry.windowHeight-0}}px;background-color:#111;padding-top:6em;overflow:hidden;">
+<div ng-show="xcountry.loading" style="max-width:900px;margin:0 auto;height:{{xcountry.windowHeight}}px;background-color:#111;padding-top:6em;overflow:hidden;">
   <div style="width:100%;text-align:center;">
     <i class="fa fa-3x fa-spinner fa-spin" style="color:white;"></i>
   </div>
 </div>
 
-<div ng-hide="xcountry.loading">
-  <div ng-if="xcountry.xselection === 'score'" class="government {{xcountry.country.government.party}}" style="background-color:#eee;color:#222;padding-top:4em;height:{{xcountry.xselection === 'score'? 13:12}}em;position:relative;z-index:100;">
-    <div style="text-align:center;">
-      <img style="height:{{xcountry.xselection === 'score'? 4:3}}em;border:2px solid white;background-color:white;border-radius:3px;" ng-src="/assets/images/{{xcountry.country.government.party || 'blk'}}.png" style="height:2em;"/>
-    </div>
-    <div style="text-align:center;padding-top:.5em;font-size:1.35em;">{{xcountry.country.government.vato}}</div>
-    <div style="text-align:center;padding-top:.75em;">{{xcountry.country.government.period_start}} - {{xcountry.country.government.period_end}}</div>
-  </div>
+<div ng-hide="xcountry.loading" style="height:{{xcountry.windowHeight-64}}px;background-color:#eee;">
+  <div ng-include src="'app/country/vato.html'"></div>
 
-  <div ng-if="xcountry.xselection !== 'score'" style="height:3em;"></div>
+  <div ng-hide="xcountry.xselection==='score'" style="height:3em"></div>
 
   <div style="background-color:#fff;z-index:200;">
     <div ng-if="xcountry.xselection === 'govs'">
@@ -39,16 +33,17 @@
       <score></score>
     </div>
     <div ng-if="xcountry.xselection === 'suggestions'">
-      <artifacts title='Propuestas'></artifacts>
+      <artifacts title='Propuestas' level={{xcountry.level().gov}}></artifacts>
     </div>
     <div ng-if="xcountry.xselection === 'complaints'">
-      <artifacts title='Quejas'></artifacts>
+      <artifacts title='Quejas' level={{xcountry.level().gov}}></artifacts>
     </div>
     <div ng-if="xcountry.xselection === 'forums'">
-      <artifacts title='Foros'></artifacts>
+      <artifacts title='Foros'  level={{xcountry.level().level}}></artifacts>
     </div>
     <div ng-if="xcountry.xselection === 'govs' && xcountry.subs() === 'General'">
       <tabs></tabs>
+      <cards></cards>
     </div>
   </div>
 </div>

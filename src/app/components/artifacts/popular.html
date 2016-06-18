@@ -4,6 +4,46 @@
   <a ng-click="xartifacts.sublink=3" style="background-color: {{xartifacts.sublink===3?xartifacts.xcolor:'#666'}}">Mandato</a>
 </div>
 
+<div style="margin-top:1em;" ng-repeat="i in [1,2,3,4,5]">
+  <div ui-sref="artifact" style="border:1px solid #ddd;border-radius:2px;margin:0 .5em;" class="md-padding bottomSheetdemoBasicUsage" ng-cloak ng-init="xartifacts.showList=false">
+    <p>Bottom sheets can be displayed by clicking one of the buttons below.  Once shown, it can be
+      dismissed by either swiping down or clicking in the shaded area....</p>
+    <div class="bottom-sheet-demo inset" layout="row" layout-sm="column" layout-align="center">
+      <!-- <md-button flex="50" class="md-primary md-raised" ng-click="xartifacts.showList=true">Show as List</md-button> -->
+    </div>
+
+    <div ng-if="alert">
+      <br>
+      <b layout="row" layout-align="center center" class="md-padding">
+        {{alert}}
+      </b>
+    </div>
+
+    <md-bottom-sheet style="margin:0 .5em;xheight:4em;" ng-show="xartifacts.showList" class="md-list md-has-header" ng-cloak>
+      <md-list>
+        <md-list-item ng-repeat="item in xartifacts.items">
+          <md-button
+            ng-click="xartifacts.listItemClick($index);xartifacts.showList=false"
+            md-autofocus="$index == 2"
+            class="md-list-item-content" >
+            <md-icon md-svg-src="{{item.icon}}"></md-icon>
+            <span class="md-inline-list-icon-label">{{ item.name }}</span>
+          </md-button>
+        </md-list-item>
+      </md-list>
+    </md-bottom-sheet>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
 <div ng-repeat="key in [10,9,8,7,6,5]" style="border-bottom:1px solid #f3f3f3;height:8em;">
   <div style="height:4.35em;padding:1em 1em 1em .5em;color:#666;line-height:1.2em;position:relative;">
     <div style="width:1em;position:absolute;right:.5em;top:1em;">

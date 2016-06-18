@@ -1,26 +1,49 @@
-<div style="width:100%;max-width:900px;margin:0 auto;">
-  <div style="position:fixed;z-index:200;width:100%;height:10em;text-align:center;max-width:900px;">
-    <div>
-        <div style="text-align:center;color:#fff;padding:1.2em 1em 1em 1em;background-color:#000;width:100%;z-index:200;border-bottom:3px solid {{xcountry.loading? '#333' : 'black'}};">
-          <div>Mexico</div>
-          <div ng-if="back">
-          </div>
-          <div ng-if="governments.back" ui-sref="governments.back" style="position:absolute;left:-.5em;top:.6em;color:#ddd;"><i class="fa fa-chevron-left"></i></div>
-        </div>
-        <div>
-          <div>Mis Calificaciones</div>
-          <div>
-            <a class="btn btn-default">Pais</btn>
-          </div>
-          <div>
-            <a class="btn btn-default">Estado</btn>
-          </div>
-          <div>
-            <a class="btn btn-default">Municipio</btn>
-          </div>
-          <a class="btn btn-default">Ok</a>
-          <a class="btn btn-default">Cancelar</a>
-        </div>
+<div id="myscores" layout="column" ng-cloak style="width:100%;max-width:900px;margin:0 auto;background-color:#fff;height:{{xmyscore.windowHeight}}px;">
+
+  <md-toolbar class="md-info">
+    <div class="md-toolbar-tools">
+      <h2 class="md-flex">Calificaciones</h2>
+      <md-button class="md-icon-button" ng-click="xmyscore.cancel()">
+        <md-icon md-svg-src="assets/images/icons/ic_close_24px.svg" aria-label="Close"></md-icon>
+      </md-button>
     </div>
-  </div>
+  </md-toolbar>
+  <md-content flex layout-padding>
+
+    <div style="border-bottom:1px solid #ddd;clear:both;height:4em;">
+      <div style="float:left;padding:1em .5em;">Gobierno Federal</div>
+      <div style="float:right;padding-top:.5em;">
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.start1=!xmyscore.start1" ng-class="{active: xmyscore.start1}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.start2=!xmyscore.start2" ng-class="{active: xmyscore.start2}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.start3=!xmyscore.start3" ng-class="{active: xmyscore.start3}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.start4=!xmyscore.start4" ng-class="{active: xmyscore.start4}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.start5=!xmyscore.start5" ng-class="{active: xmyscore.start5}"></a>
+      </div>
+    </div>
+
+    <div style="border-bottom:1px solid #ddd;clear:both;height:4em;">
+      <div style="float:left;padding:1em .5em;">Gobierno Estatal</div>
+      <div style="float:right;padding-top:.5em;">
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.start6=!xmyscore.start6" ng-class="{active: xmyscore.start6}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.start7=!xmyscore.start7" ng-class="{active: xmyscore.start7}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.start8=!xmyscore.start8" ng-class="{active: xmyscore.start8}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.start9=!xmyscore.start9" ng-class="{active: xmyscore.start9}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.start10=!xmyscore.start10" ng-class="{active: xmyscore.start10}"></a>
+      </div>
+    </div>
+
+    <div style="border-bottom:1px solid #ddd;clear:both;height:4em;">
+      <div style="float:left;padding:1em .5em;">Gobierno Municipal</div>
+      <div style="float:right;padding-top:.5em;">
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.start11=!xmyscore.start11" ng-class="{active: xmyscore.start11}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.start12=!xmyscore.start12" ng-class="{active: xmyscore.start12}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.start13=!xmyscore.start13" ng-class="{active: xmyscore.start13}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.start14=!xmyscore.start14" ng-class="{active: xmyscore.start14}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.start15=!xmyscore.start15" ng-class="{active: xmyscore.start15}"></a>
+      </div>
+    </div>
+
+
+  </md-content>
+
 </div>

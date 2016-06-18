@@ -75,6 +75,12 @@ export class CountryController {
       }
     };
 
+    this.level = function() {
+      if (this.municipio) { return { level: 'de interes en el Municipio', gov: 'al Gobierno Municipal' } }
+      if (this.region) { return {level: 'de interes Estatal',       gov: 'al Gobierno Estatal' } }
+      if (this.country) { return {level: 'de interes Nacional',     gov: 'al Gobierno Federal' } }
+    };
+
     this.govs = function() {
       if (this.country) {
         return this.country.regions || this.country.municipios;

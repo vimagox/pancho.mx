@@ -17,5 +17,12 @@ export class MyScoreController {
       $scope.$apply();
     });
 
+    this.ok = function() {
+      $window.history.back();
+    }
+
+    this.cancel = function() {
+      $window.history.back();
+    }
   }
 }

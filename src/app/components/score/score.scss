@@ -9,12 +9,16 @@
   .myscore {
     background-color:#D4AF37;
     border-radius:4px;
-    width:17.3em;
+    width:15em;
     margin:2em auto;
-    padding:1em;
+    padding:.85em 1em;
     text-align:center;
     color:white;
     border-radius:3px;
+    a {
+      color:white;
+      font-size:1.2em;
+    }
   }
   h1 {
     text-align:center;
@@ -25,7 +29,7 @@
     background-color:#000;
     margin:1em;
     border-top-radius:3px;
-    width:17em;
+    width:15em;
     margin:0 auto;
     padding:.5em .5em 1em .5em;
     border-radius:6px;

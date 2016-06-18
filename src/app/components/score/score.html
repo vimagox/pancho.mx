@@ -1,4 +1,4 @@
-<div id="score" style="height:{{xscore.windowHeight-260}}px;background-color:#eee;padding-bottom:2em;">
+<div id="score" style="height:{{xscore.windowHeight-260}}px;background-color:#eee;">
   <div style="text-align:center;padding:1em 0 1em 0;">
     <i class="fa fa-2x fa-star"></i>
     <i class="fa fa-2x fa-star"></i>
@@ -6,13 +6,13 @@
     <i class="fa fa-2x fa-star off"></i>
     <i class="fa fa-2x fa-star off"></i>
   </div>
-  <div style="text-align:center;padding-bottom:2.2em;font-size:.75em;margin-top:-1em;">
+  <div style="text-align:center;padding-bottom:1em;font-size:.75em;margin-top:-1em;">
     690 Ciudadanos
   </div>
 
   <div ng-include src="'app/components/score/board.html'"></div>
 
-  <div class="myscore">
-    <a ui-sref="myscore" style="color:white;xtext-decoration:underline;font-size:1.2em;">Mi Calificación</a>
+  <div class="myscore" ui-sref="myscore">
+    <a href="">Mi Calificación</a>
   </div>
 </div>
