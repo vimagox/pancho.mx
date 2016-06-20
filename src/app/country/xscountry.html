@@ -5,7 +5,7 @@
       <div ng-if="xcountry.backlink()" ng-click="xcountry.back()" class="patras" ><i class="fa fa-2x fa-arrow-left"></i></div>
     </div>
   </div>
-  <div class="pamenu" ui-sref="mainmenu">
+  <div class="pamenu" ng-click="xcountry.toggleMenu()">
     <i class="fa fa-2x fa-bars"></i>
   </div>
 </div>
@@ -47,3 +47,5 @@
     </div>
   </div>
 </div>
+
+<div ng-include src="'app/country/sidenav.html'"></div>

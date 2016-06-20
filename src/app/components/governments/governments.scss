@@ -3,13 +3,14 @@
   background-color:white;
   padding-bottom:5em;
   z-index:500;
+  border:1px solid red;
 }
 #lg-governments {
   overflow:auto;
   background-color:white;
   margin:0;
   .xselection {
-    border:1px solid #eee;
+    border-bottom:1px solid #eee;
     background-color:#fff;
     padding:.25em 0;
     font-size:1.2em;
@@ -29,27 +30,30 @@
 }
 #governments {
   background-color: #444;
-  margin:1em;
+  margin:0em;
 
   .xselection {
-    border:1px solid #eee;
-    height:3em;
     width:100%;
-    z-index:600;
+    position:relative;
     &:hover {
       background-color: #eee;
       border:1px solid #ccc;
     }
     .xselection-item {
+      margin-left:2.5em;
       position:relative;
-      padding:.5em;
+      height:3em;
+      border-bottom:1px solid #eee;
       img {
-        float:left;
-        height:2em;
+        // float:left;
+        height:1.75em;
         padding-right:.5em;
+        position:absolute;
+        left:-2.5em;
+        top:.65em;
       }
       h3 {
-        padding-top:.5em;
+        padding-top:1em;
         text-align:left;
         width:100%;
       }
@@ -118,20 +122,20 @@
 
   // .selections {
     // padding:1em 2em;
-    .selection-wrapper {
-      padding:.2em;
-      .selection {
-        border:1px solid #222;
-        background-color:#fff;
-        cursor:pointer;
-        border-radius:2px;
-        border:3px solid white;
-        &:hover {
-          border:3px solid #888;
-          border-radius:2px;
-        }
-      }
-    }
+    // .selection-wrapper {
+    //   padding:.2em;
+    //   .selection {
+    //     // border-bottom:1px solid #222;
+    //     background-color:#fff;
+    //     cursor:pointer;
+    //     border-radius:2px;
+    //     border:3px solid white;
+    //     &:hover {
+    //       border:3px solid #888;
+    //       border-radius:2px;
+    //     }
+    //   }
+    // }
   // }
 }
 

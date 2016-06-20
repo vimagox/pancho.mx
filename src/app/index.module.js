@@ -16,6 +16,7 @@ import { StorageService } from '../app/components/municipios/storage.service';
 import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service';
 import { NavbarDirective } from '../app/components/navbar/navbar.directive';
 import { GovernmentsDirective } from '../app/components/governments/governments.directive';
+import { SidenavDirective } from '../app/components/sidenav/sidenav.directive';
 import { FooterDirective } from '../app/components/footer/footer.directive';
 import { TabsDirective } from '../app/components/tabs/tabs.directive';
 import { ScoreDirective } from '../app/components/score/score.directive';

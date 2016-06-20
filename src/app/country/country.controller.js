@@ -1,5 +1,5 @@
 export class CountryController {
-  constructor ($log, $timeout, $scope, $state, $stateParams, $window, municipios, xstorage) {
+  constructor ($log, $timeout, $scope, $state, $stateParams, $window, municipios, xstorage, $mdSidenav) {
     'ngInject';
 
     this.loading = true;
@@ -138,6 +138,30 @@ export class CountryController {
     w.bind('resize', function () {
       $scope.$apply();
     });
+
+
+    this.toggleMenu = buildToggler('right');
+    this.isOpenMenu = function(){
+      return $mdSidenav('right').isOpen();
+    };
+
+    function buildToggler(navID) {
+      return function() {
+        $mdSidenav(navID)
+          .toggle()
+          .then(function () {
+            $log.debug("toggle " + navID + " is done");
+          });
+      }
+    }
+
+    this.closeMenu = function () {
+      // Component lookup should always be available since we are not using `ng-if`
+      $mdSidenav('right').close()
+        .then(function () {
+            $log.debug("close RIGHT is done");
+        });
+    };
 
   }
 }

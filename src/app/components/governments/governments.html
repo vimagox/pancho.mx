@@ -1,9 +1,9 @@
-<div class="visible-xs">
-  <div id="governments xs-governments" style="height:{{xgovernments.windowHeight}}px;" ng-cloak>
-    <div id="xselectable" class="selection-wrapper col-xs-12" ng-repeat="g in xgovernments.list track by $index">
+<div class="visible-xs" style="margin:0;padding:0;">
+  <div id="governments xs-governments" style="height:{{xgovernments.windowHeight}}px;padding:0;margin:0;" ng-cloak>
+    <div id="xselectable" style="margin:0;padding:0;" class="selection-wrapper col-xs-12" ng-repeat="g in xgovernments.list track by $index">
       <div class="xselection fastclickable" ng-click="xgovernments.select(g)">
         <div class="xselection-item">
-          <img ng-src="/assets/images/{{g.government.party || 'blk'}}.png" alt="{{ g.government.party }}">
+          <img style="height:1.6em;left:-2em;padding-top:.1em;" ng-src="/assets/images/{{g.government.party || 'blk'}}.png" alt="{{ g.government.party }}">
           <div>
             <h3>{{ g.name }}</h3>
           </div>
