@@ -17,7 +17,7 @@ export function CardDirective() {
 }
 
 class CardController {
-  constructor ($log, $state, $scope, $window, $timeout, $mdBottomSheet) {
+  constructor () {
     'ngInject';
   }
 }

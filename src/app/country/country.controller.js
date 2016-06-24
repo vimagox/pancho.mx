@@ -150,7 +150,7 @@ export class CountryController {
         $mdSidenav(navID)
           .toggle()
           .then(function () {
-            $log.debug("toggle " + navID + " is done");
+            // $log.debug("toggle " + navID + " is done");
           });
       }
     }
@@ -159,7 +159,7 @@ export class CountryController {
       // Component lookup should always be available since we are not using `ng-if`
       $mdSidenav('right').close()
         .then(function () {
-            $log.debug("close RIGHT is done");
+            // $log.debug("close RIGHT is done");
         });
     };
 
