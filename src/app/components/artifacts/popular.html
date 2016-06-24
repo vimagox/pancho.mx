@@ -1,15 +1,63 @@
-<div class="sublinks">
-  <a ng-click="xartifacts.sublink=1" style="background-color: {{xartifacts.sublink===1?xartifacts.xcolor:'#666'}}">Semanal</a>
-  <a ng-click="xartifacts.sublink=2" style="background-color: {{xartifacts.sublink===2?xartifacts.xcolor:'#666'}}">Mensual</a>
-  <a ng-click="xartifacts.sublink=3" style="background-color: {{xartifacts.sublink===3?xartifacts.xcolor:'#666'}}">Mandato</a>
+<div ng-if="xartifacts.title !== 'Foros'" style="color:{{xartifacts.xcolor}};text-align:center;font-size:1em;padding:0 0 .5em 0;margin-top:0;text-transform:uppercase;">{{xartifacts.title}} MAS APOYADAS</div>
+<div ng-if="xartifacts.title === 'Foros'" style="color:{{xartifacts.xcolor}};text-align:center;font-size:1em;padding:0 0 .5em 0;margin-top:0;text-transform:uppercase;">{{xartifacts.title}} MAS ACTIVOS</div>
+
+
+<!-- <div ng-cloak="" class="navBardemoBasicUsage" >
+
+  <md-content class="md-padding">
+    <md-nav-bar md-selected-nav-item="xartifacts.currentNavItem" nav-bar-aria-label="navigation links">
+      <md-nav-item md-nav-click="xartifacts.goto('page1')" name="page1">por mandato</md-nav-item>
+      <md-nav-item md-nav-click="xartifacts.goto('page2')" name="page2">por mes</md-nav-item>
+      <md-nav-item md-nav-click="xartifacts.goto('page3')" name="page3">por semana</md-nav-item>
+      <!-- these require actual routing with ui-router or ng-route, so they won't work in the demo
+      <md-nav-item md-nav-sref="app.page4" name="page4">Page Four</md-nav-item>
+      <md-nav-item md-nav-href="#page5" name="page5">Page Five</md-nav-item>
+    </md-nav-bar>
+    <span>{{currentNavItem}}</span>
+  </md-content>
+</div> -->
+
+
+
+<div id="{{xartifacts.title.toLowerCase()}}" ng-cloak>
+  <md-content style="margin: 0;">
+    <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="POR MANDATO">
+        <md-content class="md-padding">
+          <h1 class="md-display-2"></h1>
+          <div ng-include src="'app/components/artifacts/list.html'"></div>
+        </md-content>
+      </md-tab>
+      <md-tab label="POR MES" ng-class="xartifacts.title.toLowerCase()">
+        <md-content class="md-padding">
+          <!-- <h1 class="md-display-2">POR MES</h1> -->
+          <div ng-include src="'app/components/artifacts/list.html'"></div>
+        </md-content>
+      </md-tab>
+      <md-tab label="POR SEMANA" ng-class="xartifacts.title.toLowerCase()">
+        <md-content class="md-padding">
+          <!-- <h1 class="md-display-2">POR SEMANA</h1> -->
+          <div ng-include src="'app/components/artifacts/list.html'"></div>
+        </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-content>
 </div>
 
-<div style="margin-top:1em;" ng-repeat="i in [1,2,3,4,5]">
+
+
+<!-- <div class="sublinks" style="font-size:1em;margin:1em auto;border:1px solid red;" ng-init="xartifacts.sublink=3">
+  <div class="col-xs-4" style="font-size:.7em;"><a ng-click="xartifacts.sublink=3" style="background-color: {{xartifacts.sublink===3?'#222':'#666'}}">POR MANDATO</a></div>
+  <div class="col-xs-4" style="font-size:.7em;"><a ng-click="xartifacts.sublink=2" style="background-color: {{xartifacts.sublink===2?'#222':'#666'}}">POR MES</a></div>
+  <div class="col-xs-4" style="font-size:.7em;"><a ng-click="xartifacts.sublink=1" style="background-color: {{xartifacts.sublink===1?'#222':'#666'}}">POR SEMANA</a></div>
+</div> -->
+
+<!-- <div style="margin-top:1em;" ng-repeat="i in [1,2,3,4,5]">
   <div ui-sref="artifact" style="border:1px solid #ddd;border-radius:2px;margin:0 .5em;" class="md-padding bottomSheetdemoBasicUsage" ng-cloak ng-init="xartifacts.showList=false">
     <p>Bottom sheets can be displayed by clicking one of the buttons below.  Once shown, it can be
       dismissed by either swiping down or clicking in the shaded area....</p>
     <div class="bottom-sheet-demo inset" layout="row" layout-sm="column" layout-align="center">
-      <!-- <md-button flex="50" class="md-primary md-raised" ng-click="xartifacts.showList=true">Show as List</md-button> -->
+      <!-- <md-button flex="50" class="md-primary md-raised" ng-click="xartifacts.showList=true">Show as List</md-button>
     </div>
 
     <div ng-if="alert">
@@ -33,39 +81,4 @@
       </md-list>
     </md-bottom-sheet>
   </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-<div ng-repeat="key in [10,9,8,7,6,5]" style="border-bottom:1px solid #f3f3f3;height:8em;">
-  <div style="height:4.35em;padding:1em 1em 1em .5em;color:#666;line-height:1.2em;position:relative;">
-    <div style="width:1em;position:absolute;right:.5em;top:1em;">
-      <i class="fa fa-1x fa-bookmark" style="padding-right:.5em;color:{{xartifacts.xperiod === 'bookmarked'? '#2ea3ff':'#aaa'}};"></i>
-    </div>
-    <div style="position:absolute;left:.5em;top:.9em;padding-right:1.1em;">
-      Poder unilateral para anular leyes u otras acciones debidamente aprobadas
-      por el gobierno estatal, reducirle las pensiones a los retirados.
-    </div>
-  </div>
-  <div style="margin:1.15em 0;">
-    <div style="float:left;padding-top:.35em;padding-left:1.75em;color:#ddd;">
-      <!-- <img src="/assets/images/evo1.jpg" style="height:2em;"></img> -->
-      J.K. Rolling
-    </div>
-    <div style="float:right;">
-      <div class="box">
-        <div class="x">{{5*key}}<i class="fa fa-1x fa-comment"></i></div>
-      </div>
-      <div class="box">
-        <div class="x">{{20*key}}<i class="fa fa-1x fa-arrow-up"></i></div>
-      </div>
-    </div>
-  </div>
-</div>
+</div> -->

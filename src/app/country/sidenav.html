@@ -1,42 +1,11 @@
-<section layout="row" style="z-index:400" flex>
-  <md-content flex layout-padding>
-    <div layout="column" layout-fill layout-align="top center">
-        <p>
-        The left sidenav will 'lock open' on a medium (>=960px wide) device.
-        </p>
-        <p>
-        The right sidenav will focus on a specific child element.
-        </p>
-        <div>
-          <md-button ng-click="xsidenav.toggleLeft()"
-            class="md-primary" hide-gt-md>
-            Toggle left
-          </md-button>
-        </div>
-        <div>
-          <md-button ng-click="xcountry.toggleMenu()"
-            ng-hide="xcountry.isOpenMenu()"
-            class="md-primary">
-            Toggle right
-          </md-button>
-        </div>
-      </div>
-      <div flex></div>
-  </md-content>
-  <md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right">
+<section layout="row" style="z-index:400;xborder:1px solid red;padding:0;margin:0;" flex>
+  <md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" style="xborder:2px solid blue;margin:0;padding:0;">
     <md-toolbar class="md-theme-light">
-      <h1 class="md-toolbar-tools">Sidenav Right</h1>
     </md-toolbar>
-    <md-content layout-padding>
-      <form>
-        <md-input-container>
-          <label for="testInput">Test input</label>
-          <input type="text" id="testInput" ng-model="data" md-autofocus>
-        </md-input-container>
-      </form>
-      <md-button ng-click="xcountry.closeMenu()" class="md-primary">
-        Close Sidenav Right
-      </md-button>
+    <md-content layout-padding style="padding:0;margin:1em 0;">
+      <div style="width:100%;text-align:center;"><img src="assets/images/pancho.png"></img></div>
+      <md-button style="border:1px solid #aaa;width:100%;width:22.5em;margin-left:1.65em;padding:0;" ng-click="xcountry.closeMenu()" class="md-primary md-raised">Login</md-button>
+      <md-button style="border:1px solid #aaa;width:100%;width:22.5em;margin-left:1.65em;margin-top:4em;padding:0;" ng-click="xcountry.closeMenu()" class="md-secondary">Registrate</md-button>
     </md-content>
   </md-sidenav>
 </section>

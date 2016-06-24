@@ -16,15 +16,15 @@ import { StorageService } from '../app/components/municipios/storage.service';
 import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service';
 import { NavbarDirective } from '../app/components/navbar/navbar.directive';
 import { GovernmentsDirective } from '../app/components/governments/governments.directive';
-import { SidenavDirective } from '../app/components/sidenav/sidenav.directive';
 import { FooterDirective } from '../app/components/footer/footer.directive';
 import { TabsDirective } from '../app/components/tabs/tabs.directive';
+import { CardDirective } from '../app/components/card/card.directive';
 import { ScoreDirective } from '../app/components/score/score.directive';
 import { CardsDirective } from '../app/components/cards/cards.directive';
 import { ArtifactsDirective } from '../app/components/artifacts/artifacts.directive';
 import { MenuDirective } from '../app/components/menu/menu.directive';
 
-angular.module('app', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
+angular.module('app', ['ngAnimate', 'ngCookies', 'ngSanitize',
     'ngMessages', 'ngAria', 'ui.router', 'ui.bootstrap',
     'ngMaterial',
     // 'material.svgAssetsCache',
@@ -52,4 +52,5 @@ angular.module('app', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
   .directive('cards', CardsDirective)
   .directive('xmenu', MenuDirective)
   .directive('acmeNavbar', NavbarDirective)
+  .directive('card', CardDirective)
   .directive('governments', GovernmentsDirective);

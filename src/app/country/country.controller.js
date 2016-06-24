@@ -76,9 +76,9 @@ export class CountryController {
     };
 
     this.level = function() {
-      if (this.municipio) { return { level: 'de interes en el Municipio', gov: 'al Gobierno Municipal' } }
-      if (this.region) { return {level: 'de interes Estatal',       gov: 'al Gobierno Estatal' } }
-      if (this.country) { return {level: 'de interes Nacional',     gov: 'al Gobierno Federal' } }
+      if (this.municipio) { return { level: 'Temas de interes en el Municipio', gov: 'Gobierno Municipal' } }
+      if (this.region) { return {level: 'Temas de interes Estatal',       gov: 'Gobierno Estatal' } }
+      if (this.country) { return {level: 'Temas de interes Nacional',     gov: 'Gobierno Federal' } }
     };
 
     this.govs = function() {
@@ -162,6 +162,14 @@ export class CountryController {
             $log.debug("close RIGHT is done");
         });
     };
+
+    let that = this;
+    $scope.$watch('xselection', newValue => {
+      $log.log("======================");
+      $log.log(newValue);
+      $log.log("======================");
+      that.closeMenu();
+    }, true);
 
   }
 }

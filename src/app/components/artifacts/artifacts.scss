@@ -2,12 +2,12 @@
   background-color:white;
 
   .sublinks {
-    padding:1em .7em;
+    padding:1em 0 1em .75em;
     a {
       color:#fff;
-      padding:.5em 1em;
+      padding:.5em;
       border-radius:3px;
-      margin-right:.65em;
+      margin-right:.4em;
     }
   }
   input, textarea {
@@ -141,4 +141,35 @@
     font-weight: bolder;
   }
 
+}
+
+#propuestas{
+  margin-top: 1em;
+  .md-tab {
+    margin-left:.5em;
+    &.md-active {
+      background-color: #2ea3ff;
+      color:#fff;
+    }
+  }
+}
+#quejas{
+  margin-top: 1em;
+  .md-tab {
+    margin-left:.5em;
+    &.md-active {
+      background-color: #ff642f;
+      color:#fff;
+    }
+  }
+}
+#foros{
+  margin-top: 1em;
+  .md-tab{
+    margin-left:.5em;
+    &.md-active {
+      background-color: #fcc000;
+      color:#fff;
+    }
+  }
 }

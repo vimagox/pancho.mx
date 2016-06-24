@@ -1,0 +1,13 @@
+md-card {
+  .card-stats {
+    list-style: none;
+    li {
+      display:inline-block;
+      width:4em;
+      i {
+        padding-left:.25em;
+        display:inline-block;
+      }
+    }
+  }
+}

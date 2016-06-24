@@ -27,9 +27,11 @@ class ArtifactsController {
       foros: '#fcc000'
     };
 
+    this.currentNavItem = 'page1';
+
     this.$log = $log;
     this.$state = $state;
-    this.sublink = 1;
+    this.sublink = 3;
 
     this.expanded = true;
     this.xcolor = colors[this.title.toLowerCase()]
@@ -61,6 +63,14 @@ class ArtifactsController {
       var clickedItem = this.items[$index];
       $mdBottomSheet.hide(clickedItem);
     };
+
+    this.newArtifactLabel = function() {
+      if (this.title === 'Foros') {
+        return 'Crear ' + this.title.slice(0, -1) + ' ' + this.level.slice(17, this.level.length);
+      } else {
+        return 'Publicar ' + this.title.slice(0, -1) + ' ' + this.level.slice(9, this.level.length);
+      }
+    }
 
   }
 }
