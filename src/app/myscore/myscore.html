@@ -10,36 +10,40 @@
   </md-toolbar>
   <md-content flex layout-padding>
 
-    <div style="border-bottom:1px solid #ddd;clear:both;height:4em;">
-      <div style="float:left;padding:1em .5em;">Gobierno Federal</div>
-      <div style="float:right;padding-top:.5em;">
-        <a class="fa fa-star fa-2x" ng-click="xmyscore.start1=!xmyscore.start1" ng-class="{active: xmyscore.start1}"></a>
-        <a class="fa fa-star fa-2x" ng-click="xmyscore.start2=!xmyscore.start2" ng-class="{active: xmyscore.start2}"></a>
-        <a class="fa fa-star fa-2x" ng-click="xmyscore.start3=!xmyscore.start3" ng-class="{active: xmyscore.start3}"></a>
-        <a class="fa fa-star fa-2x" ng-click="xmyscore.start4=!xmyscore.start4" ng-class="{active: xmyscore.start4}"></a>
-        <a class="fa fa-star fa-2x" ng-click="xmyscore.start5=!xmyscore.start5" ng-class="{active: xmyscore.start5}"></a>
+    <div id="score" style="margin-top:.5em;">
+      <div ng-include src="'app/components/score/board2.html'"></div>
+    </div>
+
+    <div style="margin-top:1em;border-top:1px solid #ddd;border-bottom:1px solid #ddd;clear:both;height:4em;">
+      <div style="float:left;padding:1em .15em;">Gobierno Federal</div>
+      <div style="float:right;padding-top:.5em;padding-right:.2em">
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.scores.federal=1" ng-class="{active: xmyscore.scores.federal>0}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.scores.federal=2" ng-class="{active: xmyscore.scores.federal>1}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.scores.federal=3" ng-class="{active: xmyscore.scores.federal>2}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.scores.federal=4" ng-class="{active: xmyscore.scores.federal>3}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.scores.federal=5" ng-class="{active: xmyscore.scores.federal>4}"></a>
       </div>
     </div>
 
     <div style="border-bottom:1px solid #ddd;clear:both;height:4em;">
-      <div style="float:left;padding:1em .5em;">Gobierno Estatal</div>
-      <div style="float:right;padding-top:.5em;">
-        <a class="fa fa-star fa-2x" ng-click="xmyscore.start6=!xmyscore.start6" ng-class="{active: xmyscore.start6}"></a>
-        <a class="fa fa-star fa-2x" ng-click="xmyscore.start7=!xmyscore.start7" ng-class="{active: xmyscore.start7}"></a>
-        <a class="fa fa-star fa-2x" ng-click="xmyscore.start8=!xmyscore.start8" ng-class="{active: xmyscore.start8}"></a>
-        <a class="fa fa-star fa-2x" ng-click="xmyscore.start9=!xmyscore.start9" ng-class="{active: xmyscore.start9}"></a>
-        <a class="fa fa-star fa-2x" ng-click="xmyscore.start10=!xmyscore.start10" ng-class="{active: xmyscore.start10}"></a>
+      <div style="float:left;padding:1em .15em;">Gobierno Estatal</div>
+      <div style="float:right;padding-top:.5em;padding-right:.2em">
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.scores.estatal=1" ng-class="{active: xmyscore.scores.estatal>0}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.scores.estatal=2" ng-class="{active: xmyscore.scores.estatal>1}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.scores.estatal=3" ng-class="{active: xmyscore.scores.estatal>2}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.scores.estatal=4" ng-class="{active: xmyscore.scores.estatal>3}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.scores.estatal=5" ng-class="{active: xmyscore.scores.estatal>4}"></a>
       </div>
     </div>
 
     <div style="border-bottom:1px solid #ddd;clear:both;height:4em;">
-      <div style="float:left;padding:1em .5em;">Gobierno Municipal</div>
-      <div style="float:right;padding-top:.5em;">
-        <a class="fa fa-star fa-2x" ng-click="xmyscore.start11=!xmyscore.start11" ng-class="{active: xmyscore.start11}"></a>
-        <a class="fa fa-star fa-2x" ng-click="xmyscore.start12=!xmyscore.start12" ng-class="{active: xmyscore.start12}"></a>
-        <a class="fa fa-star fa-2x" ng-click="xmyscore.start13=!xmyscore.start13" ng-class="{active: xmyscore.start13}"></a>
-        <a class="fa fa-star fa-2x" ng-click="xmyscore.start14=!xmyscore.start14" ng-class="{active: xmyscore.start14}"></a>
-        <a class="fa fa-star fa-2x" ng-click="xmyscore.start15=!xmyscore.start15" ng-class="{active: xmyscore.start15}"></a>
+      <div style="float:left;padding:1em .15em;">Gobierno Municipal</div>
+      <div style="float:right;padding-top:.5em;padding-right:.2em">
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.scores.municipal=1" ng-class="{active: xmyscore.scores.municipal>0}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.scores.municipal=2" ng-class="{active: xmyscore.scores.municipal>1}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.scores.municipal=3" ng-class="{active: xmyscore.scores.municipal>2}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.scores.municipal=4" ng-class="{active: xmyscore.scores.municipal>3}"></a>
+        <a class="fa fa-star fa-2x" ng-click="xmyscore.scores.municipal=5" ng-class="{active: xmyscore.scores.municipal>4}"></a>
       </div>
     </div>
 

@@ -1,5 +1,10 @@
-<div style="color:{{xartifacts.xcolor}};text-align:center;font-size:1em;padding:0 0 .5em 0;margin-top:0;text-transform:uppercase;">{{xartifacts.title}} que me interesan</div>
+<div ng-if="xartifacts.title !== 'Foros'" style="color:{{xartifacts.xcolor}};text-align:center;font-size:1em;padding:1.5em 0 .5em 0;margin-top:0;text-transform:uppercase;">{{xartifacts.title}} Marcadas</div>
+<div ng-if="xartifacts.title === 'Foros'" style="color:{{xartifacts.xcolor}};text-align:center;font-size:1em;padding:1.5em 0 .5em 0;margin-top:0;text-transform:uppercase;">{{xartifacts.title}} Marcados</div>
 
-<!-- <div style="height:{{xartifacts.windowHeight-250}}px;">
-  <div style="color:{{xartifacts.xcolor}};text-align:left;font-size:1.3em;padding:.5em;">No tienes {{xartifacts.title.toLowerCase()}} marcadas <i class="fa fa-bookmark"></i></div>
-</div> -->
+<div id="{{xartifacts.title.toLowerCase()}}" ng-cloak style="margin-top:-.5em;">
+  <md-list ng-cloak style="padding-bottom:5em;">
+    <div ng-repeat="i in [1,2,3,4,5]" style="padding:.5em 0;">
+      <card name="bookmarked" md-theme="default" xcolor="{{xartifacts.xcolor}}" ></card>
+    </div>
+  </md-list>
+</div>

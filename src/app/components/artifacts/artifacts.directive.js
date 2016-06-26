@@ -24,7 +24,7 @@ class ArtifactsController {
     var colors = {
       propuestas: '#2ea3ff',
       quejas: '#ff642f',
-      foros: '#fcc000'
+      foros: '#7e57c2'// #e91e63'
     };
 
     this.currentNavItem = 'page1';

@@ -1,6 +1,15 @@
-<div style="color:{{xartifacts.xcolor}};text-align:center;font-size:1em;padding:0 0 .5em 0;margin-top:0;"><div style="color:{{xartifacts.xcolor}};text-align:center;font-size:1em;padding:0 0 .5em 0;margin-top:0;text-transform:uppercase;">{{xartifacts.title}} MAS RECIENTES</div>
+<div style="color:{{xartifacts.xcolor}};text-align:center;font-size:1em;padding:1.5em 0 .5em 0;margin-top:0;"><div style="color:{{xartifacts.xcolor}};text-align:center;font-size:1em;padding:0 0 .5em 0;margin-top:0;text-transform:uppercase;">{{xartifacts.title}} MAS RECIENTES</div>
 
-<div ng-if="xartifacts.expanded" ng-repeat="key in [10,9,8,7,6,5]" style="border-bottom:1px solid #f3f3f3;height:8em;">
+
+
+<div id="{{xartifacts.title.toLowerCase()}}" ng-cloak style="margin-top:-.5em;">
+  <!-- <md-content class="md-padding"> -->
+    <div ng-include src="'app/components/artifacts/list.html'"></div>
+  <!-- </md-content> -->
+</div>
+
+
+<!-- <div ng-if="xartifacts.expanded" ng-repeat="key in [10,9,8,7,6,5]" style="border-bottom:1px solid #f3f3f3;height:8em;">
   <div style="height:4.35em;padding:1em 1em 1em .5em;color:#666;line-height:1.2em;position:relative;">
     <div style="width:1em;position:absolute;right:.5em;top:1em;">
       <i class="fa fa-1x fa-bookmark" style="padding-right:.5em;color:{{xartifacts.xperiod === 'bookmarked'? '#2ea3ff':'#aaa'}};"></i>
@@ -12,7 +21,7 @@
   </div>
   <div style="margin:1.15em 0;">
     <div style="float:left;padding-top:.35em;padding-left:1.75em;color:#ddd;">
-      <!-- <img src="/assets/images/evo1.jpg" style="height:2em;"></img> -->
+      <!-- <img src="/assets/images/evo1.jpg" style="height:2em;"></img>
       J.K. Rolling
     </div>
     <div style="float:right;">
@@ -24,4 +33,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

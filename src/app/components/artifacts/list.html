@@ -1,30 +1,46 @@
-<div layout="column" ng-cloak style="padding-bottom:4em;">
-  <!-- <p style="margin-bottom: 10px;">
-    <code>Propuestas Federales</code> mas apoyadas durante este mandato.
-  </p> -->
+<md-list ng-cloak style="padding-bottom:5em;">
+  <!-- <md-subheader class="md-no-sticky">Secondary Buttons</md-subheader>
+  <md-list-item class="secondary-button-padding">
+    <p>Clicking the button to the right will fire the secondary action</p>
+    <md-button class="md-secondary" ng-click="doSecondaryAction($event)">More Info</md-button>
+  </md-list-item> -->
 
+  <div ng-repeat="i in [1,2,3,4,5]" style="padding:.5em 0;">
+    <card name="User name" md-theme="default" xcolor="{{xartifacts.xcolor}}" ></card>
+    <!-- <md-divider></md-divider> -->
+  </div>
+
+</md-list>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div layout="column" ng-cloak style="padding-bottom:4em;">
   <div ng-repeat="i in [1,2,3,4,5]" style="padding:.5em 0;">
     <card name="User name" md-theme="default" xcolor="{{xartifacts.xcolor}}"></card>
   </div>
-
-  <!-- <p class="footnote">
-    Copyright <code>1910.io</code>
-  </p> -->
-
-  <!-- <div layout layout-padding layout-align="center end" style="height:200px">
-    <md-checkbox ng-model="showDarkTheme">Use 'Dark' Themed Cards</md-checkbox>
-  </div> -->
-
-  <md-button class="md-raised md-primary" style="background-color:#aaa;margin:1em 0;width:100%;padding:.25em 0;">ver mas {{xartifacts.title}}</md-button>
-
-</div>
+  <md-button class="md-raised md-primary" style="background-color:{{xartifacts.xcolor}};margin:3em 0;width:100%;padding:.25em 0;">ver mas {{xartifacts.title}}...</md-button>
+</div> -->
 
 
+<!-- <p class="footnote">
+  Copyright <code>1910.io</code>
+</p> -->
 
-
-
-
-
+<!-- <div layout layout-padding layout-align="center end" style="height:200px">
+  <md-checkbox ng-model="showDarkTheme">Use 'Dark' Themed Cards</md-checkbox>
+</div> -->
 
 
 <!-- <div ng-repeat="key in [10,9,8,7,6,5]" style="border-bottom:1px solid #f3f3f3;height:8em;">

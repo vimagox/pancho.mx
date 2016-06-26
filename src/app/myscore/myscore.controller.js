@@ -17,6 +17,12 @@ export class MyScoreController {
       $scope.$apply();
     });
 
+    this.scores = {
+      'federal': 0,
+      'estatal': 0,
+      'municipal': 0
+    };
+
     this.ok = function() {
       $window.history.back();
     }

@@ -1,8 +1,9 @@
-<div style="color:{{xartifacts.xcolor}};text-align:center;font-size:1em;padding:0 0 .5em 0;margin-top:0;text-transform:uppercase;">Mi {{xartifacts.title.substr(0, xartifacts.title.length-1)}}</div>
+<div style="color:{{xartifacts.xcolor}};text-align:center;font-size:1em;padding:1.5em 0 .5em 0;margin-top:0;text-transform:uppercase;">Mi {{xartifacts.title.substr(0, xartifacts.title.length-1)}}</div>
+
 <div style="height:{{xartifacts.windowHeight-250}}px;">
   <div style="padding:.5em;">
     <!-- <div><input placeholder="Titulo"></input></div> -->
-    <div><textarea placeholder="{{xartifacts.title.slice(0, -1)}}" rows="10"></textarea></div>
+    <div><textarea style="font-size:.9em;" placeholder="{{xartifacts.title.slice(0, -1)}}" rows="10"></textarea></div>
   </div>
   <div style="height:12em;width:100%;padding:1em;">
     <button class="btn btn-block" style="font-size:1em;padding:.5em;background-color:{{xartifacts.xcolor}};color:#fff;">{{xartifacts.newArtifactLabel()}}</btn>

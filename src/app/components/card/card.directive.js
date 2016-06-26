@@ -5,6 +5,7 @@ export function CardDirective() {
     restrict: 'E',
     scope: {
       name: '@',
+      title: '@',
       xcolor: '@'
     },
     templateUrl: 'app/components/card/card.html',

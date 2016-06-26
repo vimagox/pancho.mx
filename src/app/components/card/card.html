@@ -1,33 +1,47 @@
-<md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch style="padding:0;margin:0;position:relative;">
-  <div style="top:0;left:0;height:2em;background-color:{{xcard.xcolor}};color:#fff;">
-    <!-- <ul class="card-stats" style="float:left;padding-left:.1em;">
-      <li><i style="color:#333;font-size:1.5em;margin:.1em .2em;" class="fa fa-2x fa-square"></i></li>
-    </ul> -->
+<md-card ng-init="xactive=false;xvote=false;" style="padding:.5em 1em;margin:.5em;position:relative;border:1px solid #ccc;border:1px solid #ddd;background-color:{{xcard.name==='bookmarked'?'#fff':'#fafafa'}};">
+  <div ng-click="xactive=!xactive" style="position:absolute;right:0em;top:-.2em;color:{{xactive?xcard.xcolor:'#ddd'}}"><i class="fa fa-2x fa-bookmark"></i></div>
+  <div class="card-header">
+    <a href="#">10/12/15 04:10 P.M.</a><a href="#" style="text-decoration:underline;">J. K. Rolling</a>
+  </div>
+  <md-card-title style="padding:0;margin-top:-.25em;">
+    <md-card-title-text style="margin:0;xheight:3em;">
+      <span class="md-subhead" style="font-size:.9em;color:#888;{{xcard.name==='bookmarked'?'#fff':'#222'}};">En este documento expongo todos los planes que hemos diseñado con la ayuda de expertos en cada materia y que realizaremos en el segundo tiempo con el apoyo todos los mexicanos. Hacia la construcción del país que soñamos para nosotros y para nuestros hijos.</span>
+    </md-card-title-text>
+  </md-card-title>
+  <md-card-actions id="xactions" layout="row" layout-align="end center" style="background-color:#ddd;xborder:1px solid red;margin:1em -1em -.5em -1em;">
+    <md-button ui-sref="artifact"><span style="font-size:.8em;">Abrir</span><i class="fa fa-expand"></i></md-button>
+    <!-- <md-button><span style="font-size:.8em;"></span></md-button> -->
+    <md-button><span style="font-size:.8em;">Reportar</span><i class="fa fa-flag"></i></md-button>
+    <md-button>1.2k<i class="fa fa-comments"></i></md-button>
+    <md-button class="score" ng-click="xvote=!xvote">200<i style="color:{{xvote?xcard.xcolor:'#ccc'}};" class="fa fa-arrow-circle-up"></i></md-button>
+  </md-card-actions>
+</md-card>
+
+<!--
+<md-card style="padding:0;margin:0;position:relative;border:1px solid #ccc;">
+   <div style="top:0;left:0;height:2em;background-color:{{xcard.xcolor}};color:#fff;">
     <ul class="card-stats right" style="float:right;padding-top:.5em;padding-right:.25em;color:#fff;">
-      <!-- <li style="text-align:right;"><i class="fa fa-commenting"></i>200</li> -->
       <li style="text-align:right;">200<i class="fa fa-arrow-circle-up"></i></li>
     </ul>
   </div>
   <md-card-title style="padding:0 .5em;margin-top:-.25em;">
     <md-card-title-text style="margin:0;xheight:3em;">
-      <!-- <span class="md-headline">Card with image</span> -->
-      <span class="md-subhead">En este documento expongo todos los planes que hemos diseñado con la ayuda de expertos en cada materia y que realizaremos en el segundo tiempo con el apoyo todos los mexicanos. Hacia la construcción del país que soñamos para nosotros y para nuestros hijos.</span>
+      <!-- <span class="md-headline">Card with image</span>
+      <span class="md-subhead" style="font-size:.9em;color:#888;">En este documento expongo todos los planes que hemos diseñado con la ayuda de expertos en cada materia y que realizaremos en el segundo tiempo con el apoyo todos los mexicanos. Hacia la construcción del país que soñamos para nosotros y para nuestros hijos.</span>
     </md-card-title-text>
     <!-- <md-card-title-media>
       <div class="md-media-sm card-media"></div>
-    </md-card-title-media> -->
+    </md-card-title-media> -
   </md-card-title>
-  <md-card-actions layout="row" layout-align="end center">
-    <md-button>Abrir<i style="padding-left:5px;" class="fa fa-expand"></i></md-button>
-    <md-button>1.2k<i style="padding-left:5px;" class="fa fa-commenting"></i></md-button>
-    <md-button>Reportar<i style="padding-left:5px;" class="fa fa-flag"></i></md-button>
-    <!-- <md-button>Comentar<i style="padding-left:5px;" class="fa fa-commenting"></i></md-button> -->
-    <md-button>Apoyar<i style="padding-left:5px;" class="fa fa-arrow-circle-up"></i></md-button>
+  <md-card-actions id="xactions" layout="row" layout-align="end center">
+    <md-button><i class="fa fa-expand"></i><span style="font-size:.8em;">Abrir</span></md-button>
+    <md-button><i class="fa fa-flag"></i><span style="font-size:.8em;">Reportar</span></md-button>
+    <md-button><i class="fa fa-commenting"></i>1.2k</md-button>
+    <md-button><i class="fa fa-arrow-circle-up"></i>200</md-button>
   </md-card-actions>
 </md-card>
 
 
-  <!--
   <div flex-xs flex-gt-xs="50" layout="column" style="padding:0;">
     <md-content class="md-padding" layout-xs="column" layout="row" style="padding:0;">
     </md-content>

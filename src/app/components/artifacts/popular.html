@@ -1,5 +1,5 @@
-<div ng-if="xartifacts.title !== 'Foros'" style="color:{{xartifacts.xcolor}};text-align:center;font-size:1em;padding:0 0 .5em 0;margin-top:0;text-transform:uppercase;">{{xartifacts.title}} MAS APOYADAS</div>
-<div ng-if="xartifacts.title === 'Foros'" style="color:{{xartifacts.xcolor}};text-align:center;font-size:1em;padding:0 0 .5em 0;margin-top:0;text-transform:uppercase;">{{xartifacts.title}} MAS ACTIVOS</div>
+<div ng-if="xartifacts.title !== 'Foros'" style="color:{{xartifacts.xcolor}};text-align:center;font-size:1em;padding:1.5em 0 .5em 0;margin-top:0;text-transform:uppercase;">{{xartifacts.title}} MAS APOYADAS</div>
+<div ng-if="xartifacts.title === 'Foros'" style="color:{{xartifacts.xcolor}};text-align:center;font-size:1em;padding:1.5em 0 .5em 0;margin-top:0;text-transform:uppercase;">{{xartifacts.title}} MAS ACTIVOS</div>
 
 
 <!-- <div ng-cloak="" class="navBardemoBasicUsage" >
@@ -19,29 +19,28 @@
 
 
 
+
+
+
 <div id="{{xartifacts.title.toLowerCase()}}" ng-cloak>
-  <md-content style="margin: 0;">
     <md-tabs md-dynamic-height md-border-bottom>
-      <md-tab label="POR MANDATO">
+      <md-tab label="ESTE MANDATO">
         <md-content class="md-padding">
           <h1 class="md-display-2"></h1>
           <div ng-include src="'app/components/artifacts/list.html'"></div>
         </md-content>
       </md-tab>
-      <md-tab label="POR MES" ng-class="xartifacts.title.toLowerCase()">
+      <md-tab label="ESTE MES" ng-class="xartifacts.title.toLowerCase()">
         <md-content class="md-padding">
-          <!-- <h1 class="md-display-2">POR MES</h1> -->
           <div ng-include src="'app/components/artifacts/list.html'"></div>
         </md-content>
       </md-tab>
-      <md-tab label="POR SEMANA" ng-class="xartifacts.title.toLowerCase()">
+      <md-tab label="ESTA SEMANA" ng-class="xartifacts.title.toLowerCase()">
         <md-content class="md-padding">
-          <!-- <h1 class="md-display-2">POR SEMANA</h1> -->
           <div ng-include src="'app/components/artifacts/list.html'"></div>
         </md-content>
       </md-tab>
     </md-tabs>
-  </md-content>
 </div>
 
 

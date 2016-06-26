@@ -1,4 +1,14 @@
 md-card {
+  .card-header {
+    font-size:.7em;
+    height:2em;
+    padding-top:.5em;
+    a {
+      margin-left: -.2em;
+      margin-right: 2.5em;
+      color: #bbb;
+    }
+  }
   .card-stats {
     list-style: none;
     li {
@@ -9,5 +19,32 @@ md-card {
         display:inline-block;
       }
     }
+  }
+  #xactions {
+      .md-button {
+        padding:0 .5em;
+        font-size: .8em;
+        min-width: 6.5em;
+        margin-left:.9em;
+        color:#aaa;
+        background-color:#ddd;//efefef;
+        i {
+          padding-left: .5em;
+        }
+        &.score {
+          border-left:1px solid #ccc;
+          color:#888;
+          background-color:#ddd;//eee;
+          padding-right:1.75em;
+          padding-top:.1em;
+          i {
+            font-size:1.75em;
+            position: absolute;
+            right:.3em;
+            top:.35em;
+            color: #555;
+          }
+        }
+      }
   }
 }
