@@ -10,6 +10,15 @@
 .ind { background-color: #000; }
 
 
+.btn-success {
+  background-color: red;
+  border:none;
+  color:#fff;
+  max-width:15em;
+  margin:0 auto;
+  text-align:center;
+  // font-size:1.5em;
+}
 .xsmain {
   h1 {
     font-size:3em;
@@ -18,10 +27,10 @@
     color:#fff;
   }
   img {
-    height:16em;
+    height:14em;
     opacity:1;
     padding-top:3em;
-    padding-bottom:1em;
+    padding-bottom:0;
   }
   .slogan {
     transform: scaleY(1.2);
@@ -60,9 +69,6 @@
   }
 }
 
-// .btn-success {
-//   background-color:#2ea3ff;
-// }
 .xcontainer {
   max-width:960px;
   margin:0 auto;
@@ -109,7 +115,7 @@
       color:#000;
     }
     &:nth-child(3) {
-      background-color:#ff642f;
+      background-color:#EE582E;//ßff642f;
       color:#000;
     }
     &:nth-child(4) {

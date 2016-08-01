@@ -1,32 +1,21 @@
 <div id="artifacts" style="padding-bottom:4.15em;" ng-init="xartifacts.subtitle='Mas Apoyadas'">
   <div style="position:relative;xheight:2.4em;background-color:{{xartifacts.xcolor}};color:#fff;font-size:1.1em;">
-    <div style="font-size:1.75em;width:100%;text-align:center;padding:.5em 0 0 0;"><b>{{xartifacts.title}}</b></div>
-    <div style="font-size:.8em;width:100%;text-align:center;padding:.25em;"><b>{{xartifacts.level}}</b></div>
-    <!-- <div style="text-align:center;color:#aaa;padding:0;font-size:1em;color:#fff;margin-top:-.25em;xtext-transform:uppercase;">{{xartifacts.title}}</div>-->
+    <div style="font-size:.8em;width:100%;text-align:center;padding:.75em;"><b>{{xartifacts.level}}</b></div>
+    <div style="font-size:1.75em;width:100%;text-align:center;padding:0 0 0 0;"><b>{{xartifacts.title}}</b></div>
   </div>
   <div class="xmenu" ng-init="xartifacts.menu=1" style="background-color:{{xartifacts.xcolor}};height:3.5em;">
-    <!-- <div style="display:inline-block;text-align:left;">
-      <a ng-click="xartifacts.menu=1" style="color:{{xartifacts.menu===1?xartifacts.xcolor:'#666'}}">Populares</a>
-      <a ng-click="xartifacts.menu=2" style="color:{{xartifacts.menu===2?xartifacts.xcolor:'#666'}}">Recientes</a>
-    </div> -->
-    <!-- <div ng-if="xartifacts.menu!==4" style="float:left;font-size:1em;padding-left:.5em;padding-top:.2em;color:#fff;margin-top:-.25em;">{{xartifacts.level}}</div>
-    <div ng-if="xartifacts.menu===4" style="float:left;font-size:1em;padding-left:.5em;padding-top:.2em;color:#fff;margin-top:-.25em;">Mi {{xartifacts.title.slice(0, -1)}}</div> -->
 
 
-    <!-- <div ng-if="xartifacts.title !== 'Foros'" style="color:{{xartifacts.xcolor}};text-align:center;font-size:1em;padding:0 0 .5em 0;margin-top:0;text-transform:uppercase;">{{xartifacts.title}} MAS APOYADAS</div>
-    <div ng-if="xartifacts.title === 'Foros'" style="color:{{xartifacts.xcolor}};text-align:center;font-size:1em;padding:0 0 .5em 0;margin-top:0;text-transform:uppercase;">{{xartifacts.title}} MAS ACTIVOS</div> -->
-
-
-    <div style="width:100%;text-align:center;margin-top:-.75em;xpadding-right:.25em;">
-      <a ng-click="xartifacts.menu=4;xartifacts.subtitle=''" style="color:{{xartifacts.menu===4?'#fff':'#ccc'}}"><i style="font-size:1.5em;" class="fa fa-2x fa-plus-square"></i></a>
-      <a ng-click="xartifacts.menu=3;xartifacts.subtitle='Favoritas'" style="color:{{xartifacts.menu===3?'#fff':'#ccc'}}"><i style="font-size:1.5em;" class="fa fa-2x fa-bookmark"></i></a>
-      <a ng-click="xartifacts.menu=2;xartifacts.subtitle='Mas Recientes'" style="color:{{xartifacts.menu===2?'#fff':'#ccc'}}"><i style="font-size:1.5em;" class="fa fa-2x fa-clock-o"></i></a>
+    <div style="width:100%;text-align:center;margin-top:-.75em;">
       <a ng-if="xartifacts.title === 'Foros'" ng-click="xartifacts.menu=1;xartifacts.subtitle='Mas Apoyadas'" style="color:{{xartifacts.menu===1?'#fff':'#ccc'}}"><i style="font-size:1.5em;" class="fa fa-2x fa-users"></i></a>
       <a ng-if="xartifacts.title !== 'Foros'" ng-click="xartifacts.menu=1;xartifacts.subtitle='Mas Apoyadas'" style="color:{{xartifacts.menu===1?'#fff':'#ccc'}}"><i style="font-size:1.5em;" class="fa fa-2x fa-arrow-circle-up"></i></a>
+      <a ng-click="xartifacts.menu=2;xartifacts.subtitle='Mas Recientes'" style="color:{{xartifacts.menu===2?'#fff':'#ccc'}}"><i style="font-size:1.5em;" class="fa fa-2x fa-clock-o"></i></a>
+      <a ng-click="xartifacts.menu=3;xartifacts.subtitle='Favoritas'" style="color:{{xartifacts.menu===3?'#fff':'#ccc'}}"><i style="font-size:1.5em;" class="fa fa-2x fa-bookmark"></i></a>
+      <a ng-click="xartifacts.menu=4;xartifacts.subtitle=''" style="color:{{xartifacts.menu===4?'#fff':'#ccc'}}"><i style="font-size:1.5em;" class="fa fa-2x fa-plus-square"></i></a>
+      <a ng-click="xartifacts.menu=5;xartifacts.subtitle=''" style="color:{{xartifacts.menu===5?'#fff':'#ccc'}}"><i style="font-size:1.5em;" class="fa fa-2x fa-search"></i></a>
     </div>
   </div>
 
-  <!-- <hr style="color:{{xartifacts.xcolor}};border:1px solid {{xartifacts.xcolor}};margin:2em .25em 2.5em .25em;"> -->
 
   <div style="background-color:#fff;height:{{xartifacts.windowHeight}}px;">
     <div ng-if="xartifacts.menu===1" ng-include src="'app/components/artifacts/popular.html'"></div>

@@ -2,40 +2,21 @@
 <div ng-if="xartifacts.title === 'Foros'" style="color:{{xartifacts.xcolor}};text-align:center;font-size:1em;padding:1.5em 0 .5em 0;margin-top:0;text-transform:uppercase;">{{xartifacts.title}} MAS ACTIVOS</div>
 
 
-<!-- <div ng-cloak="" class="navBardemoBasicUsage" >
-
-  <md-content class="md-padding">
-    <md-nav-bar md-selected-nav-item="xartifacts.currentNavItem" nav-bar-aria-label="navigation links">
-      <md-nav-item md-nav-click="xartifacts.goto('page1')" name="page1">por mandato</md-nav-item>
-      <md-nav-item md-nav-click="xartifacts.goto('page2')" name="page2">por mes</md-nav-item>
-      <md-nav-item md-nav-click="xartifacts.goto('page3')" name="page3">por semana</md-nav-item>
-      <!-- these require actual routing with ui-router or ng-route, so they won't work in the demo
-      <md-nav-item md-nav-sref="app.page4" name="page4">Page Four</md-nav-item>
-      <md-nav-item md-nav-href="#page5" name="page5">Page Five</md-nav-item>
-    </md-nav-bar>
-    <span>{{currentNavItem}}</span>
-  </md-content>
-</div> -->
-
-
-
-
-
 
 <div id="{{xartifacts.title.toLowerCase()}}" ng-cloak>
     <md-tabs md-dynamic-height md-border-bottom>
-      <md-tab label="ESTE MANDATO">
+      <md-tab label="X MANDATO">
         <md-content class="md-padding">
           <h1 class="md-display-2"></h1>
           <div ng-include src="'app/components/artifacts/list.html'"></div>
         </md-content>
       </md-tab>
-      <md-tab label="ESTE MES" ng-class="xartifacts.title.toLowerCase()">
+      <md-tab label="X MES" ng-class="xartifacts.title.toLowerCase()">
         <md-content class="md-padding">
           <div ng-include src="'app/components/artifacts/list.html'"></div>
         </md-content>
       </md-tab>
-      <md-tab label="ESTA SEMANA" ng-class="xartifacts.title.toLowerCase()">
+      <md-tab label="X SEMANA" ng-class="xartifacts.title.toLowerCase()">
         <md-content class="md-padding">
           <div ng-include src="'app/components/artifacts/list.html'"></div>
         </md-content>
