@@ -20,7 +20,6 @@ import { FooterDirective } from '../app/components/footer/footer.directive';
 import { TabsDirective } from '../app/components/tabs/tabs.directive';
 import { CardDirective } from '../app/components/card/card.directive';
 import { ScoreDirective } from '../app/components/score/score.directive';
-import { CardsDirective } from '../app/components/cards/cards.directive';
 import { ArtifactsDirective } from '../app/components/artifacts/artifacts.directive';
 import { MenuDirective } from '../app/components/menu/menu.directive';
 
@@ -49,7 +48,6 @@ angular.module('app', ['ngAnimate', 'ngCookies', 'ngSanitize',
   .directive('score', ScoreDirective)
   .directive('tabs', TabsDirective)
   .directive('artifacts', ArtifactsDirective)
-  .directive('cards', CardsDirective)
   .directive('xmenu', MenuDirective)
   .directive('acmeNavbar', NavbarDirective)
   .directive('card', CardDirective)
