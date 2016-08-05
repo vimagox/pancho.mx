@@ -17,6 +17,7 @@
 </div>
 
 <div ng-hide="xcountry.loading" style="height:{{xcountry.windowHeight-64}}px;background-color:#eee;">
+  <div ng-show="xcountry.xselection==='score'" style="padding-top:{{xcountry.windowHeight/6}}px;"
   <div ng-include src="'app/country/vato.html'"></div>
 
   <div ng-hide="xcountry.xselection==='score'" style="height:3em"></div>
@@ -29,7 +30,7 @@
         list=xcountry.govs()
         gov=xcountry.country.government></governments>
     </div>
-    <div ng-if="xcountry.xselection === 'score'">
+    <div ng-if="xcountry.xselection === 'score'" style="margin-top:.5em;">
       <score></score>
     </div>
     <div ng-if="xcountry.xselection === 'suggestions'">
